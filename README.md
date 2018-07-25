@@ -1,2 +1,4 @@
 # personal-site
-My Personal Site
+
+* Attempt to use GULP and sass
+* Attempt to use basic animation
