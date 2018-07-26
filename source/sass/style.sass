@@ -2,22 +2,30 @@ body
   margin: 0;
 
   .header
-  margin: 0
-  padding: 0
-  color: #1C77C3;
-  color: white;
-  font-size: 50px;
-  animation: pulse 3s linear infinite;
-  background: radial-gradient(10px, rgba(28, 119, 195, 0.35) 23%, transparent 50%) 0px 0px / 40px 40px, radial-gradient(10px, rgba(123, 188, 242, 0.1) 5%, transparent 50%) 0px 0px / 20px 20px;
-  min-height: 100vh;
-  color: darken(adjust-hue(#f9879b,180),30%);
+    margin: 0
+    padding: 0
+    color: #1C77C3;
+    color: white;
+    font-size: 50px;
+    animation: pulse 3s linear infinite;
+    background: radial-gradient(10px, rgba(28, 119, 195, 0.35) 23%, transparent 50%) 0px 0px / 40px 40px, radial-gradient(10px, rgba(123, 188, 242, 0.1) 5%, transparent 50%) 0px 0px / 20px 20px;
+    height: 100vh;
+    color: darken(adjust-hue(#f9879b,180),30%);
   
-  .animateImage
-    display: block;
+    .animateImage
+      display: block;
+    
+  .information
+    background-color: blue;
+    height: 100vh;
+    @media (max-width: 600px)
+      background-color: black
 
-  @media (max-width: 600px)
-    background-image: url('../../img/2.jpg')
-    color: red
+  .resume
+    background-color: pink;
+    height: 100vh;
+    @media (max-width: 600px)
+      background-color: purple
 
 @keyframes pulse 
   50% 
