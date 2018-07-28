@@ -1,6 +1,6 @@
 body {
   margin: 0; }
-  body .header {
+  body .cover {
     margin: 0;
     padding: 0;
     color: #1C77C3;
@@ -9,21 +9,44 @@ body {
     animation: pulse 3s linear infinite;
     background: radial-gradient(10px, rgba(28, 119, 195, 0.35) 23%, transparent 50%) 0px 0px/40px 40px, radial-gradient(10px, rgba(123, 188, 242, 0.1) 5%, transparent 50%) 0px 0px/20px 20px;
     height: 100vh;
-    color: #0bdcb7; }
-    body .header .animateImage {
-      display: block; }
-  body .information {
-    background-color: blue;
-    height: 100vh; }
+    color: #0bdcb7;
+    position: relative; }
     @media (max-width: 600px) {
-      body .information {
+      body .cover {
         background-color: black; } }
+  body .cover__image {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    @media (max-width: 600px) {
+      body .cover__image {
+        width: 20%; } }
+  body .cover__title {
+    margin: 0; }
+  body .cover__text {
+    color: yellow; }
   body .resume {
+    background-color: blue;
+    height: 100vh;
+    position: relative; }
+  body .resume__image {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  body .resume__title {
+    margin: 0; }
+  body .resume__text {
+    color: red; }
+  body .contact {
     background-color: pink;
     height: 100vh; }
     @media (max-width: 600px) {
-      body .resume {
+      body .contact {
         background-color: purple; } }
+  body .contact__title {
+    margin: 0; }
+  body .contact__text {
+    color: grey; }
 
 @keyframes pulse {
   50% {

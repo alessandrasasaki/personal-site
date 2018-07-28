@@ -1,7 +1,6 @@
 body 
   margin: 0;
-
-  .header
+  .cover
     margin: 0
     padding: 0
     color: #1C77C3;
@@ -11,21 +10,51 @@ body
     background: radial-gradient(10px, rgba(28, 119, 195, 0.35) 23%, transparent 50%) 0px 0px / 40px 40px, radial-gradient(10px, rgba(123, 188, 242, 0.1) 5%, transparent 50%) 0px 0px / 20px 20px;
     height: 100vh;
     color: darken(adjust-hue(#f9879b,180),30%);
-  
-    .animateImage
-      display: block;
+    position: relative;
     
-  .information
+    @media (max-width: 600px)
+      background-color: black;
+  
+  .cover__image
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @media (max-width: 600px)
+      width: 20%;
+
+  .cover__title
+    margin: 0;
+
+  .cover__text
+    color: yellow;
+    
+  .resume
     background-color: blue;
     height: 100vh;
-    @media (max-width: 600px)
-      background-color: black
+    position: relative;
 
-  .resume
+  .resume__image 
+    position: absolute;
+    top: 0;
+    right: 0;
+  
+  .resume__title
+    margin: 0;
+
+  .resume__text
+    color: red;
+    
+  .contact
     background-color: pink;
     height: 100vh;
     @media (max-width: 600px)
-      background-color: purple
+      background-color: purple;
+
+  .contact__title
+    margin: 0;
+
+  .contact__text
+    color: grey;
 
 @keyframes pulse 
   50% 
