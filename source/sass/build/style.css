@@ -14,6 +14,14 @@ body {
     @media (max-width: 600px) {
       body .cover {
         background-color: black; } }
+    body .cover .umbrella {
+      position: relative; }
+    body .cover .umbrella-left {
+      position: absolute;
+      background-color: red;
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+      height: 150px;
+      width: 350px; }
   body .cover__image {
     position: absolute;
     right: 0;
