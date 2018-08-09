@@ -3,18 +3,44 @@ body
   .cover
     margin: 0
     padding: 0
-    color: #1C77C3;
     color: white;
     font-size: 50px;
-    animation: pulse 3s linear infinite;
-    background: radial-gradient(10px, rgba(28, 119, 195, 0.35) 23%, transparent 50%) 0px 0px / 40px 40px, radial-gradient(10px, rgba(123, 188, 242, 0.1) 5%, transparent 50%) 0px 0px / 20px 20px;
-    height: 100vh;
-    color: darken(adjust-hue(#f9879b,180),30%);
     position: relative;
+    background-color: black;
+    // animation: pulse 3s linear infinite;
+    // background: radial-gradient(10px, rgba(28, 119, 195, 0.35) 23%, transparent 50%) 0px 0px / 40px 40px, radial-gradient(10px, rgba(123, 188, 242, 0.1) 5%, transparent 50%) 0px 0px / 20px 20px;
+    // height: 100vh;
+    // color: darken(adjust-hue(#f9879b,180),30%);
+
     
     @media (max-width: 600px)
-      background-color: black;
+      background-color: gray;
     
+    .rain
+      height: 100vh;
+      
+      .rain-drop
+        position: relative;
+        float: left;
+        width: 4px;
+        
+        margin: 10px;
+        left: 40px;
+        background: #84C7EB;
+        border-radius: 160px 160px 160px 160px;
+        animation: rain 0.8s infinite ease-out;
+
+      @for $i from 1 through 10
+        $height: random(40);
+        $top: random(15);
+        $animationList: -1.0, -1.2, -1.4, -1.6, -1.8;
+        $animationKey: random(length($animationList));
+        $nth: nth($animationList, $animationKey);
+        .rain-drop:nth-child(#{$i}) 
+          height: #{$height}px;
+          top: #{$top}px;
+          animation-delay: #{$nth}s;
+
     .umbrella
       position: relative;
 
@@ -76,3 +102,12 @@ body
   
   100% 
     background-position: 40px 40px, -40px 40px;
+
+@keyframes rain 
+  0% 
+    opacity: 1;
+    transform: translate(0, 0);
+
+  100% 
+    opacity: 0.2;
+    transform: translate(0, 100vh);
