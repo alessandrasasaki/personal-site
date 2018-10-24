@@ -1,24 +1,59 @@
 body 
   margin: 0;
-  .cover
+
+  /*** COVER ***/
+  .cover-container
+    height: 100vh;
+    background-color: red;
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+  .cover__text
+    display: flex;
+
+  .cover__text--highlighted
+    display: flex;
+
+  /*** RAINBOW ***/
+  .rainbow-container
+    height: 100vh;
+    background-color: purple;
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+  .rainbow__text
+    display: flex;
+
+  .rainbow__text--highlighted
+    display: flex;
+
+  /*** RAIN ***/
+  .rain-container
+    height: 100vh;
     margin: 0
     padding: 0
     color: white;
     font-size: 50px;
     position: relative;
-    background-color: black;
-    // animation: pulse 3s linear infinite;
-    // background: radial-gradient(10px, rgba(28, 119, 195, 0.35) 23%, transparent 50%) 0px 0px / 40px 40px, radial-gradient(10px, rgba(123, 188, 242, 0.1) 5%, transparent 50%) 0px 0px / 20px 20px;
-    // height: 100vh;
-    // color: darken(adjust-hue(#f9879b,180),30%);
+    background-color: #00081c;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 
-    
-    @media (max-width: 600px)
-      background-color: gray;
-    
     .rain
       height: 100vh;
-      
       .rain-drop
         position: relative;
         float: left;
@@ -29,8 +64,9 @@ body
         background: #84C7EB;
         border-radius: 160px 160px 160px 160px;
         animation: rain 0.8s infinite ease-out;
-
-      @for $i from 1 through 10
+      
+      $n: 100;
+      @for $i from 1 through $n
         $height: random(40);
         $top: random(15);
         $animationList: -1.0, -1.2, -1.4, -1.6, -1.8;
@@ -41,61 +77,43 @@ body
           top: #{$top}px;
           animation-delay: #{$nth}s;
 
-    .umbrella
-      position: relative;
-
-    .umbrella-left
-      position: absolute;
-      background-color: red;
-      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-      height: 150px;
-      width: 350px;
-    
-    .umbrella-middle
-
-    .umbrella-right
-  
-  .cover__image
+  .rain__content
     position: absolute;
-    right: 0;
-    bottom: 0;
-    @media (max-width: 600px)
-      width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  .cover__title
-    margin: 0;
+  .rain__text
+    display: flex;
 
-  .cover__text
-    color: yellow;
-    
-  .resume
+  .rain__text--highlighted
+    display: flex;
+
+  /*** CONTACT ***/
+  .contact-container
     background-color: blue;
     height: 100vh;
     position: relative;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 
-  .resume__image 
+  .contact__image 
+    height: 100vh;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
+    display: flex;
   
-  .resume__title
-    margin: 0;
-
-  .resume__text
-    color: red;
-    
-  .contact
-    background-color: pink;
-    height: 100vh;
-    @media (max-width: 600px)
-      background-color: purple;
-
-  .contact__title
-    margin: 0;
-
   .contact__text
-    color: grey;
+    margin: 0;
+    display: flex;
 
+/*** ANIMATIONS ***/
 @keyframes pulse 
   50% 
     background-position: 20px 20px, -20px 20px;
@@ -111,3 +129,7 @@ body
   100% 
     opacity: 0.2;
     transform: translate(0, 100vh);
+  
+.test
+  background: yellow
+  
