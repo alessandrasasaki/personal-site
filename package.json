@@ -1,0 +1,33 @@
+{
+  "name": "Alessandra Sasaki Personal Site",
+  "version": "1.0.0",
+  "description": "* Attempt to use GULP and sass\r * Attempt to use basic animation",
+  "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.1.5",
+    "cosmiconfig": "^5.0.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "jquery": "^3.3.1",
+    "postcss-load-config": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alessandrasasaki/personal-site.git"
+  },
+  "author": "Alessandra Sasaki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alessandrasasaki/personal-site/issues"
+  },
+  "homepage": "https://github.com/alessandrasasaki/personal-site#readme"
+}

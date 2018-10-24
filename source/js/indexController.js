@@ -1,8 +1,3 @@
-window.onload = function teste(){
-    alert('dsffdsdsfsfd');
-    console.log('dsasdadas');
-}
-
 $(document).ready(function() {
     var n = $(window).width() > 600 ? 100 : 30;
     console.log(n);

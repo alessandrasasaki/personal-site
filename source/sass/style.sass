@@ -1,10 +1,12 @@
 body 
   margin: 0;
+  font-family: 'Lato', sans-serif;
 
   /*** COVER ***/
   .cover-container
     height: 100vh;
-    background-color: red;
+    width: 100vw;
+    background-color: #3F334D;
     position: relative;
     margin: 0;
     display: flex;
@@ -15,14 +17,20 @@ body
 
   .cover__text
     display: flex;
+    justify-content: center;
 
   .cover__text--highlighted
     display: flex;
+    justify-content: center;
 
   /*** RAINBOW ***/
   .rainbow-container
     height: 100vh;
-    background-color: purple;
+    width: 100vw;
+    font-size: 22px;
+    animation: rainbow-background;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
     position: relative;
     margin: 0;
     display: flex;
@@ -30,20 +38,25 @@ body
     flex-direction: column;
     justify-content: center;
     align-content: center;
-
+    font-weight: bold;
+    
   .rainbow__text
     display: flex;
+    justify-content: center;
 
   .rainbow__text--highlighted
+    font-family: 'Indie Flower', cursive;
     display: flex;
+    justify-content: center;
 
   /*** RAIN ***/
   .rain-container
     height: 100vh;
+    width: 100vw;
+    font-size: 22px;
     margin: 0
     padding: 0
     color: white;
-    font-size: 50px;
     position: relative;
     background-color: #00081c;
     display: flex;
@@ -54,6 +67,8 @@ body
 
     .rain
       height: 100vh;
+      $n: 100;
+      
       .rain-drop
         position: relative;
         float: left;
@@ -65,7 +80,7 @@ body
         border-radius: 160px 160px 160px 160px;
         animation: rain 0.8s infinite ease-out;
       
-      $n: 100;
+      
       @for $i from 1 through $n
         $height: random(40);
         $top: random(15);
@@ -86,33 +101,82 @@ body
 
   .rain__text
     display: flex;
+    justify-content: center;
 
   .rain__text--highlighted
     display: flex;
+    justify-content: center;
 
   /*** CONTACT ***/
   .contact-container
-    background-color: blue;
     height: 100vh;
+    width: 100vw;
+    background-color: #574B60;
     position: relative;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-
+    align-items: flex-start;
+    color: white;
+    
   .contact__image 
     height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-  
-  .contact__text
-    margin: 0;
     display: flex;
 
+    @media (max-width: 880px)
+      opacity: 0.3;
+  
+  .contact__about
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @media (max-width: 880px)
+      position: absolute;
+
+  .contact__title
+    display: flex;
+    font-size: 28px;
+    margin: 0;
+    @media (max-width: 880px)
+      z-index: 2;
+
+  .contact__subtitle  
+    display: flex;
+    font-size: 14px;
+    margin: 0 0 40px 0;
+    @media (max-width: 880px)
+      z-index: 2;
+
+  .contact__text
+    display: flex;
+    font-size: 18px;
+    color: #FFFFFA;
+    
+    @media (max-width: 880px)
+      z-index: 2;
+
+  .contact__link
+    display: flex;
+    font-size: 18px;
+    text-decoration: none;
+    color: #FFFFFA;
+    @media (max-width: 880px)
+      z-index: 2;
+  
+  .contact__link:hover
+    color: #BCA0BC;
+
+  .footer
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    font-size: 10px;
+    text-align: right;
+    color: white;
+    z-index: 2;
 /*** ANIMATIONS ***/
 @keyframes pulse 
   50% 
@@ -130,6 +194,26 @@ body
     opacity: 0.2;
     transform: translate(0, 100vh);
   
-.test
-  background: yellow
-  
+@keyframes rainbow-background
+  0%, 100%
+    background: rgb(255, 0, 0);
+    color: black;
+  15%
+    background: rgb(255, 165, 0);
+    color: black;
+  30%
+    background: rgb(255, 255, 0);
+    color: black;
+  45%
+    background: rgb(0, 255, 0);
+    color: black;
+  60%
+    background: rgb(0, 0, 125);
+    color: white;
+  75%
+    background: rgb(75, 0, 0130);
+    color: white;
+  90%
+    background: rgb(128, 0, 255);
+    color: white;
+    
