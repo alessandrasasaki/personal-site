@@ -21,9 +21,6 @@ body
     justify-content: center;
     align-content: center;
     font-weight: bold;
-    
-    @media screen and (max-device-width: 600px)
-      font-size: 44px;
 
   .rainbow__text
     display: flex;
@@ -49,9 +46,6 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    @media screen and (max-device-width: 600px)
-      font-size: 44px;
 
     .rain
       height: 100vh;
@@ -109,7 +103,7 @@ body
     align-items: flex-start;
     color: white;
     
-    @media screen and (max-device-width: 600px)
+    @media screen and (max-width: 660px)
       align-items: center;
 
   .contact__image 
@@ -117,7 +111,7 @@ body
     display: flex;
     flex-flow: wrap;
 
-    @media screen and (max-device-width: 600px)
+    @media screen and (max-width: 660px)
       width: 100vw;
       opacity: 0.3;
   
@@ -126,42 +120,37 @@ body
     flex-wrap: wrap;
     flex-direction: column;
 
-    @media screen and (max-device-width: 600px)
+    @media screen and (max-width: 660px)
       position: absolute;
 
   .contact__title
     display: flex;
     font-size: 28px;
     margin: 0;
-    @media screen and (max-device-width: 600px)
+    @media screen and (max-width: 660px)
       z-index: 2;
-      font-size: 48px;
 
   .contact__subtitle  
     display: flex;
     font-size: 14px;
     margin: 0 0 40px 0;
-    @media screen and (max-device-width: 600px)
+    @media screen and (max-width: 660px)
       z-index: 2;
-      font-size: 34px;
 
   .contact__text
     display: flex;
-    font-size: 18px;
     color: #FFFFFA;
     
-    @media screen and (max-device-width: 600px)
+    @media screen and (max-width: 660px)
       z-index: 2;
-      font-size: 38px;
 
   .contact__link
     display: flex;
     font-size: 18px;
     text-decoration: none;
     color: #FFFFFA;
-    @media screen and (max-device-width: 600px)
+    @media screen and (max-width: 660px)
       z-index: 2;
-      font-size: 38px;
   
   .contact__link:hover
     color: #BCA0BC;
@@ -174,9 +163,6 @@ body
     text-align: right;
     color: white;
     z-index: 2;
-
-    @media screen and (max-device-width: 600px)
-      font-size: 32px;
 
 /*** ANIMATIONS ***/
 @keyframes pulse 
