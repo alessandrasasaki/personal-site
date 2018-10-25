@@ -1,7 +1,10 @@
+html 
+  overflow-x: hidden;
+
 body 
   margin: 0;
   font-family: 'Lato', sans-serif;
-
+  overflow-x: hidden;
   /*** RAINBOW ***/
   .rainbow-container
     height: 100vh;
@@ -19,6 +22,9 @@ body
     align-content: center;
     font-weight: bold;
     
+    @media screen and (max-device-width: 600px)
+      font-size: 44px;
+
   .rainbow__text
     display: flex;
     justify-content: center;
@@ -37,12 +43,15 @@ body
     padding: 0
     color: white;
     position: relative;
-    background-color: #00081c;
+    background: linear-gradient(to bottom, #020202, #011627);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-device-width: 600px)
+      font-size: 44px;
 
     .rain
       height: 100vh;
@@ -52,10 +61,10 @@ body
         position: relative;
         float: left;
         width: 4px;
-        
         margin: 10px;
         left: 40px;
-        background: #84C7EB;
+        background: white;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%);
         border-radius: 160px 160px 160px 160px;
         animation: rain 0.8s infinite ease-out;
       
@@ -100,11 +109,16 @@ body
     align-items: flex-start;
     color: white;
     
+    @media screen and (max-device-width: 600px)
+      align-items: center;
+
   .contact__image 
     height: 100vh;
     display: flex;
+    flex-flow: wrap;
 
-    @media (max-width: 880px)
+    @media screen and (max-device-width: 600px)
+      width: 100vw;
       opacity: 0.3;
   
   .contact__about
@@ -112,50 +126,58 @@ body
     flex-wrap: wrap;
     flex-direction: column;
 
-    @media (max-width: 880px)
+    @media screen and (max-device-width: 600px)
       position: absolute;
 
   .contact__title
     display: flex;
     font-size: 28px;
     margin: 0;
-    @media (max-width: 880px)
+    @media screen and (max-device-width: 600px)
       z-index: 2;
+      font-size: 48px;
 
   .contact__subtitle  
     display: flex;
     font-size: 14px;
     margin: 0 0 40px 0;
-    @media (max-width: 880px)
+    @media screen and (max-device-width: 600px)
       z-index: 2;
+      font-size: 34px;
 
   .contact__text
     display: flex;
     font-size: 18px;
     color: #FFFFFA;
     
-    @media (max-width: 880px)
+    @media screen and (max-device-width: 600px)
       z-index: 2;
+      font-size: 38px;
 
   .contact__link
     display: flex;
     font-size: 18px;
     text-decoration: none;
     color: #FFFFFA;
-    @media (max-width: 880px)
+    @media screen and (max-device-width: 600px)
       z-index: 2;
+      font-size: 38px;
   
   .contact__link:hover
     color: #BCA0BC;
 
   .footer
     position: absolute;
-    right: 2px;
+    right: 22px;
     bottom: 2px;
-    font-size: 10px;
+    font-size: 12px;
     text-align: right;
     color: white;
     z-index: 2;
+
+    @media screen and (max-device-width: 600px)
+      font-size: 32px;
+
 /*** ANIMATIONS ***/
 @keyframes pulse 
   50% 
@@ -175,23 +197,23 @@ body
   
 @keyframes rainbow-background
   0%, 100%
-    background: rgb(255, 0, 0);
+    background: #A40606;
     color: black;
   15%
-    background: rgb(255, 165, 0);
+    background: #D7CF07;
     color: black;
   30%
-    background: rgb(255, 255, 0);
+    background: #D98324;
     color: black;
   45%
-    background: rgb(0, 255, 0);
+    background: #70AE6E;
     color: black;
   60%
-    background: rgb(0, 0, 125);
+    background: #19647E;
     color: white;
   75%
-    background: rgb(75, 0, 0130);
+    background: #3D2B3D;
     color: white;
   90%
-    background: rgb(128, 0, 255);
+    background: #3626A7;
     color: white;
