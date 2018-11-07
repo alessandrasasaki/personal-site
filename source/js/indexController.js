@@ -86,8 +86,8 @@ window.onload = function() {
               return 'rainBlock';
           }
       }
-    }
-}*/
+    }*/
+}
 // let lastScrollTop = 0;
 // let scrollLoading = false;
 // const windowHeight = $(window).height();
