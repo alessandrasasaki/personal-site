@@ -22,11 +22,69 @@ body
     align-content: center;
     font-weight: bold;
 
+    .switchLabel
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+
+    .switch
+      display: flex;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+
+    #languageSwitch
+      position: absolute !important;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      bottom: 0;
+
+    #languageLabel
+      display: inline-block;
+      position: relative;
+      height: 20px;
+      width: 50px;
+      background-color: #EFF0F3;
+      top: 2px;
+      right: 2px;
+      cursor: pointer;
+      border-radius: 20px;
+      color: transparent;
+      transition: background-color 500ms ease;
+      &:after 
+        transition: right 500ms ease; 
+        background-color: 500ms ease;
+        box-shadow: 500ms ease;
+
+    #languageLabel:after
+      content: '';
+      display: block;
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      top: 2px;
+      right: 32px;
+      border-radius: 50%;
+      background-color: #070606;
+      box-shadow: 1px 0px 0px #434241;
+
+    #languageSwitch:checked + #languageLabel
+      background: #070606;
+    
+    #languageSwitch:checked + #languageLabel:after
+      right: 3px;
+      background-color: #EFF0F3;
+      box-shadow: -1px 0px 0px #434241;
+
   .rainbow__text
+    text-align: center;
     display: flex;
     justify-content: center;
 
   .rainbow__text--highlighted
+    text-align: center;
     font-family: 'Indie Flower', cursive;
     display: flex;
     justify-content: center;
@@ -81,11 +139,14 @@ body
     justify-content: center;
     align-items: center;
 
-  .rain__text
+  .rain__text, .rain__text--2
+    text-align: center;
     display: flex;
     justify-content: center;
 
   .rain__text--highlighted
+    text-align: center;
+    font-family: 'Neucha', cursive;
     display: flex;
     justify-content: center;
 
@@ -103,7 +164,7 @@ body
     align-items: flex-start;
     color: white;
     
-    @media screen and (max-width: 660px)
+    @media screen and (max-width: 800px)
       align-items: center;
 
   .contact__image 
@@ -111,7 +172,7 @@ body
     display: flex;
     flex-flow: wrap;
 
-    @media screen and (max-width: 660px)
+    @media screen and (max-width: 800px)
       width: 100vw;
       opacity: 0.3;
   
@@ -120,28 +181,28 @@ body
     flex-wrap: wrap;
     flex-direction: column;
 
-    @media screen and (max-width: 660px)
+    @media screen and (max-width: 800px)
       position: absolute;
 
   .contact__title
     display: flex;
     font-size: 28px;
     margin: 0;
-    @media screen and (max-width: 660px)
+    @media screen and (max-width: 800px)
       z-index: 2;
 
   .contact__subtitle  
     display: flex;
     font-size: 14px;
     margin: 0 0 40px 0;
-    @media screen and (max-width: 660px)
+    @media screen and (max-width: 800px)
       z-index: 2;
 
   .contact__text
     display: flex;
     color: #FFFFFA;
     
-    @media screen and (max-width: 660px)
+    @media screen and (max-width: 800px)
       z-index: 2;
 
   .contact__link
@@ -149,7 +210,7 @@ body
     font-size: 18px;
     text-decoration: none;
     color: #FFFFFA;
-    @media screen and (max-width: 660px)
+    @media screen and (max-width: 800px)
       z-index: 2;
   
   .contact__link:hover

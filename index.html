@@ -10,18 +10,24 @@
     <link href="https://fonts.googleapis.com/css?family=Lato|Indie+Flower|Neucha" rel="stylesheet">
 </head>
 <body>
-    <div class="rainbow-container">
-            <p class="rainbow__text">For every</p>
-            <p class="rainbow__text--highlighted">little rainbow</p>
+    <div id="rainbowBlock" class="rainbow-container">
+        <div class="switch">
+            <input id="languageSwitch" type="checkbox"/>
+            <label id="languageLabel" for="languageSwitch"></label>
+            <span class="switchLabel">Português</span>
+        </div>
+        <p class="rainbow__text">"Meus olhos procuram constantemente</p>
+        <p class="rainbow__text--highlighted">O arco-íris dos meus sonhos</p>
     </div>
-    <div class="rain-container">
+    <div id="rainBlock" class="rain-container">
         <div id="rain" class="rain"></div>
         <div class="rain__content">
-            <p class="rain__text">there was a </p>
-            <p class="rain__text--highlighted">little rain.</p>
+            <p class="rain__text">E eu às vezes falho</p>
+            <p class="rain__text--2">Em ser grata aos pingos de chuva</p>
+            <p class="rain__text--highlighted">Que mantêm minha esperança viva"</p>
         </div>
     </div>
-    <div class="contact-container">
+    <div id="contactBlock"class="contact-container">
             <img class="contact__image"src="./source/img/3.png"/>
             <div class="contact__about">
                 <p class="contact__title">Alessandra Sasaki</p>
