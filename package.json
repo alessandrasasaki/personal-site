@@ -1,24 +1,29 @@
 {
-  "name": "Alessandra Sasaki Personal Site",
+  "name": "personal-site",
   "version": "1.0.0",
-  "description": "* Attempt to use GULP and sass\r * Attempt to use basic animation",
-  "main": "gulpfile.js",
+  "description": "Alessandra's Personal Site",
+  "main": "indexController.js",
   "directories": {
     "lib": "lib"
   },
   "dependencies": {
     "autoprefixer": "^9.1.5",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
     "cosmiconfig": "^5.0.6",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sourcemaps": "^2.6.4",
+    "http-server": "^0.11.1",
     "jquery": "^3.3.1",
     "postcss-load-config": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel": "babel --presets es2015 source/js/indexController.js -o source/js/build/indexController.bundle.js",
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
