@@ -4,7 +4,7 @@
 * Attempt to use basic animation
 
 ```
-> Run `npm install`
+* Run npm install
 
-> Run `npm start`
+* Run npm start
 ```
