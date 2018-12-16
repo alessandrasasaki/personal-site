@@ -4,7 +4,7 @@ $(document).ready(() => {
     //Utilizado function para nao perder a referencia do this
     $('input:checkbox').change( function () {
         if ($(this).is(`:checked`)) {
-            $('.switchLabel').text(`Português`);
+            $('.switchLabel').text(`PORTUGUÊS`);
             $('.rainbow__text').text(`'Meus olhos procuram constantemente`);
             $('.rainbow__text--highlighted').text(`O arco-íris dos meus sonhos`);
             $('.rain__text').text(`E eu às vezes falho`);
@@ -17,7 +17,7 @@ $(document).ready(() => {
             $('#summoner').text(`Status do invocador`);
         }
         else {
-            $('.switchLabel').text(`English`);
+            $('.switchLabel').text(`ENGLISH`);
             $('.rainbow__text').text(`'My eyes constantly seek`);
             $('.rainbow__text--highlighted').text(`The rainbow of my dreams`);
             $('.rain__text').text(`And I sometimes fail`);

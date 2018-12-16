@@ -6,7 +6,7 @@ $(document).ready(function () {
     //Utilizado function para nao perder a referencia do this
     $('input:checkbox').change(function () {
         if ($(this).is(':checked')) {
-            $('.switchLabel').text('Portugu\xEAs');
+            $('.switchLabel').text('PORTUGU\xCAS');
             $('.rainbow__text').text('\'Meus olhos procuram constantemente');
             $('.rainbow__text--highlighted').text('O arco-\xEDris dos meus sonhos');
             $('.rain__text').text('E eu \xE0s vezes falho');
@@ -18,7 +18,7 @@ $(document).ready(function () {
             $('#curriculum').attr('href', 'http://alessandrasasaki.com/cas/AS.pdf');
             $('#summoner').text('Status do invocador');
         } else {
-            $('.switchLabel').text('English');
+            $('.switchLabel').text('ENGLISH');
             $('.rainbow__text').text('\'My eyes constantly seek');
             $('.rainbow__text--highlighted').text('The rainbow of my dreams');
             $('.rain__text').text('And I sometimes fail');
