@@ -90,6 +90,7 @@ body
     justify-content: center;
 
   /*** RAIN ***/
+  
   .rain-container
     height: 100vh;
     width: 100vw;
@@ -107,30 +108,51 @@ body
 
     .rain
       height: 100vh;
-      $n: 100;
-      
       .rain-drop
         position: relative;
         float: left;
-        width: 4px;
+        width: 2px;
         margin: 10px;
         left: 40px;
-        background: white;
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%);
+        background: transparent;
+        background: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
         border-radius: 160px 160px 160px 160px;
         animation: rain 0.8s infinite ease-out;
       
+      @media screen and (max-width: 800px)
+        $n: 30;
+        @for $i from 1 through $n
+          $height: random(40);
+          $top: random(15);
+          $animationDelayList: -1.5, -2.0, -2.5, -3.0, -3.5, -4.0;
+          $animationDelayKey: random(length($animationDelayList));
+          $delay: nth($animationDelayList, $animationDelayKey);
+          $animationDurationList: 1, 1.5, 2.5, 2.5, 3;
+          $animationDurationKey: random(length($animationDurationList));
+          $duration: nth($animationDurationList, $animationDurationKey);
+          .rain-drop:nth-child(#{$i}) 
+            height: #{$height}px;
+            top: #{$top}px;
+            animation-delay: #{$delay}s;
+            animation-duration: #{$duration}s;
+
+      @media screen and (min-width: 800px)
+        $n: 100;
+        @for $i from 1 through $n
+          $height: random(40);
+          $top: random(15);
+          $animationDelayList: -1.5, -2.0, -2.5, -3.0, -3.5, -4.0;
+          $animationDelayKey: random(length($animationDelayList));
+          $delay: nth($animationDelayList, $animationDelayKey);
+          $animationDurationList: 1, 1.5, 2.5, 2.5, 3;
+          $animationDurationKey: random(length($animationDurationList));
+          $duration: nth($animationDurationList, $animationDurationKey);
+          .rain-drop:nth-child(#{$i}) 
+            height: #{$height}px;
+            top: #{$top}px;
+            animation-delay: #{$delay}s;
+            animation-duration: #{$duration}s;
       
-      @for $i from 1 through $n
-        $height: random(40);
-        $top: random(15);
-        $animationList: -1.0, -1.2, -1.4, -1.6, -1.8;
-        $animationKey: random(length($animationList));
-        $nth: nth($animationList, $animationKey);
-        .rain-drop:nth-child(#{$i}) 
-          height: #{$height}px;
-          top: #{$top}px;
-          animation-delay: #{$nth}s;
 
   .rain__content
     position: absolute;

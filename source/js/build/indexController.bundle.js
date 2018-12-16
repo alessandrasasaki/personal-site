@@ -1,15 +1,6 @@
 'use strict';
 
 $(document).ready(function () {
-    //Rain drops generator
-    var n = $(window).width() > 800 ? 100 : 30;
-    for (var i = 0; i < n; i++) {
-        $('#rain').append('<div class="rain-drop"></div>');
-    }
-});
-
-window.onload = function () {
-
     //Language
     $('#languageSwitch').prop('checked', true);
     //Utilizado function para nao perder a referencia do this
@@ -21,6 +12,11 @@ window.onload = function () {
             $('.rain__text').text('E eu \xE0s vezes falho');
             $('.rain__text--2').text('Em ser grata aos pingos de chuva');
             $('.rain__text--highlighted').text('Que mant\xEAm minha esperan\xE7a viva\'');
+            $('.contact__subtitle').text('Desenvolvedora Front-end');
+            $('.contact__text').text('S\xE3o Paulo - Brasil');
+            $('#curriculum').text('Curr\xEDculo');
+            $('#curriculum').attr('href', 'http://alessandrasasaki.com/cas/AS.pdf');
+            $('#summoner').text('Status do invocador');
         } else {
             $('.switchLabel').text('English');
             $('.rainbow__text').text('\'My eyes constantly seek');
@@ -28,23 +24,36 @@ window.onload = function () {
             $('.rain__text').text('And I sometimes fail');
             $('.rain__text--2').text('To be grateful for raindrops');
             $('.rain__text--highlighted').text('That keep my hopes alive\'');
+            $('.contact__subtitle').text('Front-end developer');
+            $('.contact__text').text('S\xE3o Paulo - Brazil');
+            $("#curriculum").text('Curriculum');
+            $('#curriculum').attr('href', 'teste');
+            $('#summoner').text('Summoner stats');
         }
     });
+});
+
+window.onload = function () {
 
     //Mobile Jump Between Sections - Swap
-    /*let touchstartY = 0;
-    let touchendY = 0;
-    let currentSection = 1;
-      let gestureZone = document.getElementsByTagName('body')[0];
-      gestureZone.addEventListener('touchstart', function(event) {
+    var touchstartY = 0;
+    var touchendY = 0;
+    var currentSection = 1;
+
+    var gestureZone = document.getElementsByTagName('body')[0];
+
+    gestureZone.addEventListener('touchstart', function (event) {
         touchstartY = event.changedTouches[0].screenY;
     }, false);
-      gestureZone.addEventListener('touchend', function(event) {
+
+    gestureZone.addEventListener('touchend', function (event) {
         touchendY = event.changedTouches[0].screenY;
         handleGesture();
-    }, false); 
-      function handleGesture() {
-      console.log('CURRENTSECTION = ' + currentSection);
+    }, false);
+
+    function handleGesture() {
+
+        console.log('CURRENTSECTION = ' + currentSection);
         if (touchendY < touchstartY) {
             scrollToSection(currentSection, 1);
         }
@@ -52,66 +61,95 @@ window.onload = function () {
             scrollToSection(currentSection, -1);
         }
     }
-      //Desktop Jump Between Sections
-    let lastScrollTop = 0;
-    let waitForScroll = false;
-      window.addEventListener('scroll', scrollEvents, false);
-      let scrollEvents =  () => {
-        debugger;
-        if (waitForScroll == true) {
-        console.log('waiting...');
-        return;
+
+    //Desktop Jump Between Sections
+    var lastScrollTop = 0;
+    var windowHeight = $(window).height();
+    var scrollEvents = function scrollEvents() {
+        //removeScrollEventListener();
+        var st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop) {
+            console.log('down');
+            //await scrollToSection(currentSection, 1);  
+        } else {
+            console.log('up');
+
+            //await scrollToSection(currentSection, -1);
         }
-        else {
-            waitForScroll = true;
-            window.removeEventListener('scroll', scrollEvents, false);
-            let st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st > lastScrollTop){
-                console.log('down');
-                scrollToSection(currentSection, 1);
-            } else {
-                console.log('up');
-                scrollToSection(currentSection, -1);
-            }
-            lastScrollTop = st <= 0 ? 0 : st;
+        lastScrollTop = st <= 0 ? 0 : st;
+
+        //console.log('habilitando scroll.....');
+        //await enableScrollEventListener();
+    };
+
+    var enableScrollEventListener = function enableScrollEventListener() {
+        console.log('enabled');
+        window.addEventListener('scroll', scrollEvents, false);
+    };
+
+    var removeScrollEventListener = function removeScrollEventListener() {
+        console.log('disabled');
+        window.removeEventListener('scroll', scrollEvents, false);
+    };
+
+    var generateRainDrops = function generateRainDrops() {
+        var n = $(window).width() > 800 ? 100 : 30;
+        for (var i = 0; i < n; i++) {
+            $('#rain').append('<div class="rain-drop"></div>');
         }
-      console.log('entrou no role');
-    
-        }
-      let scrollToSection = (currPos, direction) => { 
-        const elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction));
+    };
+
+    var goToTop = new Promise(function (resolve) {
+        (function () {
+            resolve(window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            }));
+        });
+    });
+
+    var startPage = function startPage() {
+        goToTop.then(function () {
+            enableScrollEventListener();
+        });
+    };
+
+    var scrollToSection = function scrollToSection(currPos, direction) {
+        var elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction));
         window.scrollTo({
-        top: elementToScrollTo.offsetTop, 
-        behavior: 'smooth' 
-      });
-      waitForScroll = false;
-    }
-    
-    let getNextPosHash = (currPos, direction) => {
-       if (direction == 1) {
+            top: elementToScrollTo.offsetTop,
+            behavior: 'smooth'
+        });
+        console.log('sim, finalizou scroll');
+    };
+
+    var getNextPosHash = function getNextPosHash(currPos, direction) {
+        if (direction == 1) {
             switch (currPos) {
-              case 1:
+                case 1:
                     currentSection++;
                     return 'rainBlock';
-               case 2:
-                   currentSection++;
+                case 2:
+                    currentSection++;
                     return 'contactBlock';
-              case 3:
+                case 3:
                     return 'contactBlock';
-          }
-      }
-      else {
-              switch (currPos) {
-              case 1:
+            }
+        } else {
+            switch (currPos) {
+                case 1:
                     return 'rainbowBlock';
-               case 2:
+                case 2:
                     currentSection--;
                     return 'rainbowBlock';
-              case 3:
+                case 3:
                     currentSection--;
                     return 'rainBlock';
-          }
-      }
-    }*/
+            }
+        }
+    };
+
+    generateRainDrops();
+    startPage();
 };
 //scrollIntoView - jQuery

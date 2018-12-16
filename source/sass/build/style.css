@@ -12,12 +12,9 @@ body {
     height: 100vh;
     width: 100vw;
     font-size: 22px;
-    -webkit-animation: rainbow-background;
-            animation: rainbow-background;
-    -webkit-animation-duration: 25s;
-            animation-duration: 25s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation: rainbow-background;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
     position: relative;
     margin: 0;
     display: flex;
@@ -103,514 +100,665 @@ body {
       body .rain-container .rain .rain-drop {
         position: relative;
         float: left;
-        width: 4px;
+        width: 2px;
         margin: 10px;
         left: 40px;
-        background: white;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+        background: transparent;
+        background: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
         border-radius: 160px 160px 160px 160px;
-        -webkit-animation: rain 0.8s infinite ease-out;
-                animation: rain 0.8s infinite ease-out; }
-      body .rain-container .rain .rain-drop:nth-child(1) {
-        height: 5px;
-        top: 14px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(2) {
-        height: 36px;
-        top: 5px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(3) {
-        height: 23px;
-        top: 10px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(4) {
-        height: 19px;
-        top: 13px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(5) {
-        height: 3px;
-        top: 10px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(6) {
-        height: 15px;
-        top: 4px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(7) {
-        height: 1px;
-        top: 2px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(8) {
-        height: 10px;
-        top: 12px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(9) {
-        height: 7px;
-        top: 11px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(10) {
-        height: 27px;
-        top: 2px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(11) {
-        height: 24px;
-        top: 14px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(12) {
-        height: 15px;
-        top: 14px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(13) {
-        height: 31px;
-        top: 9px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(14) {
-        height: 11px;
-        top: 15px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(15) {
-        height: 6px;
-        top: 2px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(16) {
-        height: 28px;
-        top: 9px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(17) {
-        height: 7px;
-        top: 15px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(18) {
-        height: 14px;
-        top: 3px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(19) {
-        height: 17px;
-        top: 2px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(20) {
-        height: 2px;
-        top: 6px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(21) {
-        height: 37px;
-        top: 10px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(22) {
-        height: 18px;
-        top: 2px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(23) {
-        height: 2px;
-        top: 1px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(24) {
-        height: 40px;
-        top: 6px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(25) {
-        height: 20px;
-        top: 3px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(26) {
-        height: 33px;
-        top: 7px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(27) {
-        height: 34px;
-        top: 3px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(28) {
-        height: 25px;
-        top: 14px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(29) {
-        height: 8px;
-        top: 11px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(30) {
-        height: 37px;
-        top: 15px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(31) {
-        height: 19px;
-        top: 1px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(32) {
-        height: 11px;
-        top: 2px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(33) {
-        height: 25px;
-        top: 4px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(34) {
-        height: 16px;
-        top: 10px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(35) {
-        height: 19px;
-        top: 5px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(36) {
-        height: 8px;
-        top: 13px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(37) {
-        height: 38px;
-        top: 14px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(38) {
-        height: 35px;
-        top: 8px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(39) {
-        height: 33px;
-        top: 13px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(40) {
-        height: 13px;
-        top: 12px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(41) {
-        height: 2px;
-        top: 15px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(42) {
-        height: 7px;
-        top: 2px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(43) {
-        height: 40px;
-        top: 2px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(44) {
-        height: 13px;
-        top: 10px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(45) {
-        height: 18px;
-        top: 5px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(46) {
-        height: 39px;
-        top: 13px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(47) {
-        height: 34px;
-        top: 3px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(48) {
-        height: 20px;
-        top: 2px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(49) {
-        height: 8px;
-        top: 12px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(50) {
-        height: 10px;
-        top: 1px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(51) {
-        height: 6px;
-        top: 6px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(52) {
-        height: 6px;
-        top: 15px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(53) {
-        height: 11px;
-        top: 2px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(54) {
-        height: 17px;
-        top: 15px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(55) {
-        height: 32px;
-        top: 12px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(56) {
-        height: 23px;
-        top: 13px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(57) {
-        height: 24px;
-        top: 12px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(58) {
-        height: 25px;
-        top: 6px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(59) {
-        height: 10px;
-        top: 8px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(60) {
-        height: 21px;
-        top: 14px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(61) {
-        height: 37px;
-        top: 9px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(62) {
-        height: 30px;
-        top: 8px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(63) {
-        height: 20px;
-        top: 14px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(64) {
-        height: 26px;
-        top: 11px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(65) {
-        height: 39px;
-        top: 15px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(66) {
-        height: 7px;
-        top: 4px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(67) {
-        height: 34px;
-        top: 1px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(68) {
-        height: 17px;
-        top: 2px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(69) {
-        height: 24px;
-        top: 1px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(70) {
-        height: 14px;
-        top: 11px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(71) {
-        height: 6px;
-        top: 3px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(72) {
-        height: 17px;
-        top: 12px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(73) {
-        height: 20px;
-        top: 8px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(74) {
-        height: 31px;
-        top: 2px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(75) {
-        height: 31px;
-        top: 9px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(76) {
-        height: 9px;
-        top: 5px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(77) {
-        height: 38px;
-        top: 12px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(78) {
-        height: 7px;
-        top: 11px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(79) {
-        height: 15px;
-        top: 11px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(80) {
-        height: 34px;
-        top: 5px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(81) {
-        height: 20px;
-        top: 14px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(82) {
-        height: 27px;
-        top: 11px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(83) {
-        height: 22px;
-        top: 12px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(84) {
-        height: 4px;
-        top: 2px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(85) {
-        height: 18px;
-        top: 8px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(86) {
-        height: 9px;
-        top: 13px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(87) {
-        height: 18px;
-        top: 7px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(88) {
-        height: 37px;
-        top: 7px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(89) {
-        height: 9px;
-        top: 4px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(90) {
-        height: 1px;
-        top: 1px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(91) {
-        height: 25px;
-        top: 10px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(92) {
-        height: 15px;
-        top: 8px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
-      body .rain-container .rain .rain-drop:nth-child(93) {
-        height: 4px;
-        top: 12px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(94) {
-        height: 24px;
-        top: 8px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(95) {
-        height: 28px;
-        top: 6px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(96) {
-        height: 8px;
-        top: 8px;
-        -webkit-animation-delay: -1s;
-                animation-delay: -1s; }
-      body .rain-container .rain .rain-drop:nth-child(97) {
-        height: 3px;
-        top: 6px;
-        -webkit-animation-delay: -1.8s;
-                animation-delay: -1.8s; }
-      body .rain-container .rain .rain-drop:nth-child(98) {
-        height: 38px;
-        top: 8px;
-        -webkit-animation-delay: -1.6s;
-                animation-delay: -1.6s; }
-      body .rain-container .rain .rain-drop:nth-child(99) {
-        height: 36px;
-        top: 12px;
-        -webkit-animation-delay: -1.4s;
-                animation-delay: -1.4s; }
-      body .rain-container .rain .rain-drop:nth-child(100) {
-        height: 4px;
-        top: 8px;
-        -webkit-animation-delay: -1.2s;
-                animation-delay: -1.2s; }
+        animation: rain 0.8s infinite ease-out; }
+      @media screen and (max-width: 800px) {
+        body .rain-container .rain .rain-drop:nth-child(1) {
+          height: 7px;
+          top: 4px;
+          animation-delay: -3.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(2) {
+          height: 29px;
+          top: 3px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(3) {
+          height: 30px;
+          top: 7px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(4) {
+          height: 12px;
+          top: 10px;
+          animation-delay: -2.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(5) {
+          height: 19px;
+          top: 1px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(6) {
+          height: 40px;
+          top: 13px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(7) {
+          height: 13px;
+          top: 11px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(8) {
+          height: 34px;
+          top: 3px;
+          animation-delay: -3s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(9) {
+          height: 20px;
+          top: 7px;
+          animation-delay: -4s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(10) {
+          height: 7px;
+          top: 4px;
+          animation-delay: -2.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(11) {
+          height: 32px;
+          top: 9px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(12) {
+          height: 36px;
+          top: 11px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(13) {
+          height: 24px;
+          top: 4px;
+          animation-delay: -4s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(14) {
+          height: 27px;
+          top: 13px;
+          animation-delay: -2.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(15) {
+          height: 22px;
+          top: 6px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(16) {
+          height: 16px;
+          top: 10px;
+          animation-delay: -2.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(17) {
+          height: 31px;
+          top: 3px;
+          animation-delay: -2s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(18) {
+          height: 14px;
+          top: 7px;
+          animation-delay: -3s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(19) {
+          height: 24px;
+          top: 11px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(20) {
+          height: 39px;
+          top: 14px;
+          animation-delay: -2s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(21) {
+          height: 20px;
+          top: 4px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(22) {
+          height: 16px;
+          top: 13px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(23) {
+          height: 6px;
+          top: 4px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(24) {
+          height: 34px;
+          top: 14px;
+          animation-delay: -1.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(25) {
+          height: 28px;
+          top: 2px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(26) {
+          height: 21px;
+          top: 11px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(27) {
+          height: 35px;
+          top: 15px;
+          animation-delay: -3s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(28) {
+          height: 7px;
+          top: 4px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(29) {
+          height: 38px;
+          top: 2px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(30) {
+          height: 30px;
+          top: 4px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; } }
+      @media screen and (min-width: 800px) {
+        body .rain-container .rain .rain-drop:nth-child(1) {
+          height: 25px;
+          top: 1px;
+          animation-delay: -3s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(2) {
+          height: 13px;
+          top: 3px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(3) {
+          height: 1px;
+          top: 6px;
+          animation-delay: -2.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(4) {
+          height: 21px;
+          top: 13px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(5) {
+          height: 2px;
+          top: 8px;
+          animation-delay: -1.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(6) {
+          height: 4px;
+          top: 5px;
+          animation-delay: -3.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(7) {
+          height: 5px;
+          top: 15px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(8) {
+          height: 30px;
+          top: 10px;
+          animation-delay: -2.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(9) {
+          height: 30px;
+          top: 4px;
+          animation-delay: -3.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(10) {
+          height: 38px;
+          top: 8px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(11) {
+          height: 32px;
+          top: 5px;
+          animation-delay: -3s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(12) {
+          height: 25px;
+          top: 8px;
+          animation-delay: -2.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(13) {
+          height: 23px;
+          top: 14px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(14) {
+          height: 26px;
+          top: 7px;
+          animation-delay: -4s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(15) {
+          height: 22px;
+          top: 3px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(16) {
+          height: 15px;
+          top: 14px;
+          animation-delay: -3.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(17) {
+          height: 40px;
+          top: 2px;
+          animation-delay: -2.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(18) {
+          height: 11px;
+          top: 6px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(19) {
+          height: 37px;
+          top: 10px;
+          animation-delay: -4s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(20) {
+          height: 15px;
+          top: 6px;
+          animation-delay: -1.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(21) {
+          height: 37px;
+          top: 5px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(22) {
+          height: 9px;
+          top: 4px;
+          animation-delay: -1.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(23) {
+          height: 15px;
+          top: 14px;
+          animation-delay: -1.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(24) {
+          height: 5px;
+          top: 15px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(25) {
+          height: 35px;
+          top: 7px;
+          animation-delay: -3.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(26) {
+          height: 24px;
+          top: 15px;
+          animation-delay: -3.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(27) {
+          height: 27px;
+          top: 11px;
+          animation-delay: -3s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(28) {
+          height: 1px;
+          top: 2px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(29) {
+          height: 3px;
+          top: 2px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(30) {
+          height: 29px;
+          top: 2px;
+          animation-delay: -4s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(31) {
+          height: 25px;
+          top: 6px;
+          animation-delay: -1.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(32) {
+          height: 8px;
+          top: 9px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(33) {
+          height: 16px;
+          top: 2px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(34) {
+          height: 4px;
+          top: 2px;
+          animation-delay: -3.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(35) {
+          height: 38px;
+          top: 11px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(36) {
+          height: 23px;
+          top: 10px;
+          animation-delay: -3.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(37) {
+          height: 6px;
+          top: 13px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(38) {
+          height: 40px;
+          top: 15px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(39) {
+          height: 40px;
+          top: 13px;
+          animation-delay: -1.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(40) {
+          height: 30px;
+          top: 13px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(41) {
+          height: 5px;
+          top: 12px;
+          animation-delay: -1.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(42) {
+          height: 34px;
+          top: 6px;
+          animation-delay: -2.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(43) {
+          height: 18px;
+          top: 6px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(44) {
+          height: 5px;
+          top: 3px;
+          animation-delay: -2s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(45) {
+          height: 24px;
+          top: 13px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(46) {
+          height: 35px;
+          top: 15px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(47) {
+          height: 2px;
+          top: 13px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(48) {
+          height: 31px;
+          top: 7px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(49) {
+          height: 15px;
+          top: 7px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(50) {
+          height: 25px;
+          top: 8px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(51) {
+          height: 19px;
+          top: 12px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(52) {
+          height: 16px;
+          top: 12px;
+          animation-delay: -2s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(53) {
+          height: 31px;
+          top: 12px;
+          animation-delay: -3s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(54) {
+          height: 29px;
+          top: 3px;
+          animation-delay: -4s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(55) {
+          height: 15px;
+          top: 7px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(56) {
+          height: 13px;
+          top: 1px;
+          animation-delay: -4s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(57) {
+          height: 31px;
+          top: 13px;
+          animation-delay: -1.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(58) {
+          height: 12px;
+          top: 5px;
+          animation-delay: -3.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(59) {
+          height: 30px;
+          top: 6px;
+          animation-delay: -3s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(60) {
+          height: 39px;
+          top: 11px;
+          animation-delay: -2s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(61) {
+          height: 31px;
+          top: 2px;
+          animation-delay: -4s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(62) {
+          height: 34px;
+          top: 12px;
+          animation-delay: -4s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(63) {
+          height: 8px;
+          top: 5px;
+          animation-delay: -3.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(64) {
+          height: 2px;
+          top: 13px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(65) {
+          height: 35px;
+          top: 13px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(66) {
+          height: 18px;
+          top: 13px;
+          animation-delay: -3s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(67) {
+          height: 2px;
+          top: 14px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(68) {
+          height: 26px;
+          top: 6px;
+          animation-delay: -3s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(69) {
+          height: 22px;
+          top: 11px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(70) {
+          height: 12px;
+          top: 5px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(71) {
+          height: 28px;
+          top: 4px;
+          animation-delay: -2.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(72) {
+          height: 23px;
+          top: 1px;
+          animation-delay: -4s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(73) {
+          height: 15px;
+          top: 11px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(74) {
+          height: 40px;
+          top: 2px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(75) {
+          height: 18px;
+          top: 5px;
+          animation-delay: -4s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(76) {
+          height: 13px;
+          top: 8px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(77) {
+          height: 36px;
+          top: 9px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(78) {
+          height: 3px;
+          top: 13px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(79) {
+          height: 36px;
+          top: 6px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(80) {
+          height: 10px;
+          top: 10px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(81) {
+          height: 38px;
+          top: 15px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(82) {
+          height: 34px;
+          top: 8px;
+          animation-delay: -2s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(83) {
+          height: 38px;
+          top: 6px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(84) {
+          height: 33px;
+          top: 10px;
+          animation-delay: -3s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(85) {
+          height: 26px;
+          top: 9px;
+          animation-delay: -2.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(86) {
+          height: 15px;
+          top: 9px;
+          animation-delay: -1.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(87) {
+          height: 18px;
+          top: 5px;
+          animation-delay: -4s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(88) {
+          height: 10px;
+          top: 6px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(89) {
+          height: 7px;
+          top: 9px;
+          animation-delay: -4s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(90) {
+          height: 11px;
+          top: 6px;
+          animation-delay: -2s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(91) {
+          height: 20px;
+          top: 9px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(92) {
+          height: 20px;
+          top: 7px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(93) {
+          height: 25px;
+          top: 4px;
+          animation-delay: -2s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(94) {
+          height: 12px;
+          top: 9px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(95) {
+          height: 16px;
+          top: 10px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(96) {
+          height: 18px;
+          top: 9px;
+          animation-delay: -4s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(97) {
+          height: 36px;
+          top: 10px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(98) {
+          height: 23px;
+          top: 6px;
+          animation-delay: -4s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(99) {
+          height: 21px;
+          top: 14px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(100) {
+          height: 15px;
+          top: 5px;
+          animation-delay: -4s;
+          animation-duration: 1.5s; } }
   body .rain__content {
     position: absolute;
     display: flex;
@@ -696,59 +844,19 @@ body {
     z-index: 2; }
 
 /*** ANIMATIONS ***/
-@-webkit-keyframes pulse {
-  50% {
-    background-position: 20px 20px, -20px 20px; }
-  100% {
-    background-position: 40px 40px, -40px 40px; } }
 @keyframes pulse {
   50% {
     background-position: 20px 20px, -20px 20px; }
   100% {
     background-position: 40px 40px, -40px 40px; } }
 
-@-webkit-keyframes rain {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); }
-  100% {
-    opacity: 0.2;
-    -webkit-transform: translate(0, 100vh);
-            transform: translate(0, 100vh); } }
-
 @keyframes rain {
   0% {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); }
+    transform: translate(0, 0); }
   100% {
     opacity: 0.2;
-    -webkit-transform: translate(0, 100vh);
-            transform: translate(0, 100vh); } }
-
-@-webkit-keyframes rainbow-background {
-  0%, 100% {
-    background: #A40606;
-    color: black; }
-  15% {
-    background: #D7CF07;
-    color: black; }
-  30% {
-    background: #D98324;
-    color: black; }
-  45% {
-    background: #70AE6E;
-    color: black; }
-  60% {
-    background: #19647E;
-    color: white; }
-  75% {
-    background: #3D2B3D;
-    color: white; }
-  90% {
-    background: #3626A7;
-    color: white; } }
+    transform: translate(0, 100vh); } }
 
 @keyframes rainbow-background {
   0%, 100% {
@@ -772,5 +880,3 @@ body {
   90% {
     background: #3626A7;
     color: white; } }
-
-/*# sourceMappingURL=style.css.map */
