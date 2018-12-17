@@ -34,123 +34,173 @@ $(document).ready(() => {
 
 window.onload = () => {
 
-    //Mobile Jump Between Sections - Swap
-    let touchstartY = 0;
-    let touchendY = 0;
-    let currentSection = 1;
-
-    let gestureZone = document.getElementsByTagName('body')[0];
-
-    gestureZone.addEventListener('touchstart', function(event) {
-        touchstartY = event.changedTouches[0].screenY;
-    }, false);
-
-    gestureZone.addEventListener('touchend', function(event) {
-        touchendY = event.changedTouches[0].screenY;
-        handleGesture();
-    }, false); 
-
-    function handleGesture() {
-
-    console.log('CURRENTSECTION = ' + currentSection);
-        if (touchendY < touchstartY) {
-            scrollToSection(currentSection, 1);
+    if (/Mobi/.test(navigator.userAgent)) {
+        let currentSection = 1;
+        let touchstartY = 0;
+        let touchendY = 0;
+    
+        let scrollToSection = (currPos, direction) => {
+            const elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction))
+            window.scrollTo({
+            top: elementToScrollTo.offsetTop, 
+            behavior: 'smooth' 
+          })
+          console.log('sim, finalizou scroll');
+        };  
+        
+        let getNextPosHash = (currPos, direction) => {
+           if (direction == 1) {
+                switch (currPos) {
+                  case 1:
+                        currentSection++;
+                        return 'rainBlock';
+                   case 2:
+                       currentSection++;
+                        return 'contactBlock';
+                  case 3:
+                        return 'contactBlock';
+              }
+          }
+          else {
+                  switch (currPos) {
+                  case 1:
+                        return 'rainbowBlock';
+                   case 2:
+                        currentSection--;
+                        return 'rainbowBlock';
+                  case 3:
+                        currentSection--;
+                        return 'rainBlock';
+              }
+          }
         }
-        if (touchendY > touchstartY) {
-            scrollToSection(currentSection, -1);
+
+        let gestureZone = document.getElementsByTagName('body')[0];
+
+        gestureZone.addEventListener('touchstart', function(event) {
+            touchstartY = event.changedTouches[0].screenY;
+        }, false);
+
+        gestureZone.addEventListener('touchend', function(event) {
+            touchendY = event.changedTouches[0].screenY;
+            handleGesture();
+        }, false); 
+
+        function handleGesture() {
+            console.log('CURRENTSECTION = ' + currentSection);
+            if (touchendY < touchstartY && touchstartY - touchendY > 10) {
+                console.log('touchstartY: ' + touchstartY);
+                console.log('touchendY: ' + touchendY);
+                scrollToSection(currentSection, 1);
+            }
+            if (touchendY > touchstartY && touchendY - touchstartY > 10) {
+                console.log('touchstartY: ' + touchstartY);
+                console.log('touchendY: ' + touchendY);
+                console.log('up');
+                scrollToSection(currentSection, -1);
+            }
         }
     }
+    else {
+        let currentSection = 1;
+        let lastScrollTop = 0;
+        const wait = waitTime => new Promise((resolve, reject)=> setTimeout(resolve, waitTime));
 
-    //Desktop Jump Between Sections
-    let lastScrollTop = 0;
-    const windowHeight = $(window).height();
-    const scrollEvents = () => {
-            //removeScrollEventListener();
+        let scrollToSection = (currPos, direction) => {
+            const elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction))
+            window.scrollTo({
+            top: elementToScrollTo.offsetTop, 
+            behavior: 'smooth' 
+          })
+          console.log('sim, finalizou scroll');
+        };  
+        
+        let getNextPosHash = (currPos, direction) => {
+           if (direction == 1) {
+                switch (currPos) {
+                  case 1:
+                        currentSection++;
+                        return 'rainBlock';
+                   case 2:
+                       currentSection++;
+                        return 'contactBlock';
+                  case 3:
+                        return 'contactBlock';
+              }
+          }
+          else {
+                  switch (currPos) {
+                  case 1:
+                        return 'rainbowBlock';
+                   case 2:
+                        currentSection--;
+                        return 'rainbowBlock';
+                  case 3:
+                        currentSection--;
+                        return 'rainBlock';
+              }
+          }
+        }
+       
+        const removeScrollEventListener = () => {
+            console.log('disabled');
+            window.removeEventListener('scroll', scrollEvents, false);
+        }
+    
+        const enableScrollEventListener = () => {
+            console.log('enabled');
+            window.addEventListener('scroll', scrollEvents, false);
+        }
+    
+        const scrollEvents = () => {
+            
+            removeScrollEventListener();
+    
             let st = window.pageYOffset || document.documentElement.scrollTop;
             if (st > lastScrollTop){
-                console.log('down');
-                //await scrollToSection(currentSection, 1);  
+                console.log('downSCROLL');
+                scrollToSection(currentSection, 1);
+                (async () => { 
+                    await wait(500); 
+                    enableScrollEventListener() })()
+    
             } else {
-                console.log('up');
-
-                //await scrollToSection(currentSection, -1);
+                console.log('upSCROLL');
+    
+                scrollToSection(currentSection, -1);
+                (async () => { 
+                    await wait(400); 
+                    enableScrollEventListener() })()
+                
             }
             lastScrollTop = st <= 0 ? 0 : st;
-
-            //console.log('habilitando scroll.....');
-            //await enableScrollEventListener();
-    }
-
-    const enableScrollEventListener = () => {
-        console.log('enabled');
-        window.addEventListener('scroll', scrollEvents, false);
-    }
-    
-    const removeScrollEventListener = () => {
-        console.log('disabled');
-        window.removeEventListener('scroll', scrollEvents, false);
-    }
-
-    const generateRainDrops = () => {
-        const n = $(window).width() > 800 ? 100 : 30;
-        for (let i=0; i < n; i++) {
-            $('#rain').append(`<div class="rain-drop"></div>`);
         }
+        enableScrollEventListener();
     }
 
-    const goToTop = new Promise ((resolve) => {
+/*     const goToTop = new Promise ((resolve) => {
         () => {
             resolve (window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             }));
         }
-    });
+    }); */
 
-    const startPage = () => {
+/*     const startPage = () => {
         goToTop
         .then(() => {
             enableScrollEventListener()
         });
+    }  */
+
+    const generateRainDrops = () => {
+        const n = $(window).width() > 800 ? 100 : 30;
+        for (let i=0; i < n; i++) {
+            $('#rain').append(`<div class="rain-drop"></div>`);
+        }
     } 
-
-    let scrollToSection = (currPos, direction) => { 
-        const elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction));
-        window.scrollTo({
-        top: elementToScrollTo.offsetTop, 
-        behavior: 'smooth' 
-      });
-      console.log('sim, finalizou scroll');
-    }
     
-    let getNextPosHash = (currPos, direction) => {
-       if (direction == 1) {
-            switch (currPos) {
-              case 1:
-                    currentSection++;
-                    return 'rainBlock';
-               case 2:
-                   currentSection++;
-                    return 'contactBlock';
-              case 3:
-                    return 'contactBlock';
-          }
-      }
-      else {
-              switch (currPos) {
-              case 1:
-                    return 'rainbowBlock';
-               case 2:
-                    currentSection--;
-                    return 'rainbowBlock';
-              case 3:
-                    currentSection--;
-                    return 'rainBlock';
-          }
-      }
-    }
-
     generateRainDrops();
-    startPage();
 }
 //scrollIntoView - jQuery
