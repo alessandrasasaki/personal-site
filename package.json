@@ -1,7 +1,7 @@
 {
   "name": "personal-site",
   "version": "1.0.0",
-  "description": "Alessandra's Personal Site",
+  "description": "Alessandra Sasaki Personal Site",
   "main": "indexController.js",
   "directories": {
     "lib": "lib"
@@ -13,8 +13,8 @@
     "babel-preset-es2015": "^6.24.1",
     "cosmiconfig": "^5.0.6",
     "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1",
     "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "http-server": "^0.11.1",
     "jquery": "^3.3.1",

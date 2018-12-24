@@ -34,16 +34,83 @@ $(document).ready(function () {
 });
 
 window.onload = function () {
+    var currentSection = 1;
+    var touchstartY = 0;
+    var touchendY = 0;
+
+    var scrollToSection = function scrollToSection(currPos, direction) {
+        //     const elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction))
+        //     window.scrollTo({
+        //     top: elementToScrollTo.offsetTop, 
+        //     behavior: 'smooth' 
+        //   })
+
+        switch (currPos) {
+            case 1:
+                if (direction === 1) {
+                    $("body").css({
+                        'transform': 'translateY(-100vh)',
+                        'transition': 'all 1s'
+                    });
+                    $("#switch").css({
+                        'transform': 'translateY(100vh)',
+                        'transition': 'all 1s'
+                    });
+                    currentSection++;
+                    return;
+                }
+                return;
+            case 2:
+                if (direction === 1) {
+                    $("body").css({
+                        'transform': 'translateY(-200vh)',
+                        'transition': 'all 1s'
+                    });
+                    $("#switch").css({
+                        'transform': 'translateY(200vh)',
+                        'transition': 'all 1s'
+                    });
+                    currentSection++;
+                    return;
+                }
+                $("body").css({
+                    'transform': 'translateY(0)',
+                    'transition': 'all 1s'
+                });
+                $("#switch").css({
+                    'transform': 'translateY(0)',
+                    'transition': 'all 1s'
+                });
+                currentSection--;
+                return;
+            case 3:
+                if (direction === 1) {
+                    return;
+                }
+                $("body").css({
+                    'transform': 'translateY(-100vh)',
+                    'transition': 'all 1s'
+                });
+                $("#switch").css({
+                    'transform': 'translateY(100vh)',
+                    'transition': 'all 1s'
+                });
+                currentSection--;
+                return;
+        }
+
+        console.log('sim, finalizou scroll');
+    };
 
     if (/Mobi/.test(navigator.userAgent)) {
         var handleGesture = function handleGesture() {
             console.log('CURRENTSECTION = ' + currentSection);
-            if (touchendY < touchstartY && touchstartY - touchendY > 10) {
+            if (touchendY < touchstartY && touchstartY - touchendY > 30) {
                 console.log('touchstartY: ' + touchstartY);
                 console.log('touchendY: ' + touchendY);
                 scrollToSection(currentSection, 1);
             }
-            if (touchendY > touchstartY && touchendY - touchstartY > 10) {
+            if (touchendY > touchstartY && touchendY - touchstartY > 30) {
                 console.log('touchstartY: ' + touchstartY);
                 console.log('touchendY: ' + touchendY);
                 console.log('up');
@@ -51,44 +118,32 @@ window.onload = function () {
             }
         };
 
-        var currentSection = 1;
-        var touchstartY = 0;
-        var touchendY = 0;
-
-        var scrollToSection = function scrollToSection(currPos, direction) {
-            var elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction));
-            window.scrollTo({
-                top: elementToScrollTo.offsetTop,
-                behavior: 'smooth'
-            });
-            console.log('sim, finalizou scroll');
-        };
-
-        var getNextPosHash = function getNextPosHash(currPos, direction) {
-            if (direction == 1) {
-                switch (currPos) {
-                    case 1:
-                        currentSection++;
-                        return 'rainBlock';
-                    case 2:
-                        currentSection++;
-                        return 'contactBlock';
-                    case 3:
-                        return 'contactBlock';
-                }
-            } else {
-                switch (currPos) {
-                    case 1:
-                        return 'rainbowBlock';
-                    case 2:
-                        currentSection--;
-                        return 'rainbowBlock';
-                    case 3:
-                        currentSection--;
-                        return 'rainBlock';
-                }
-            }
-        };
+        // let getNextPosHash = (currPos, direction) => {
+        //    if (direction == 1) {
+        //         switch (currPos) {
+        //           case 1:
+        //                 currentSection++;
+        //                 return 'rainBlock';
+        //            case 2:
+        //                currentSection++;
+        //                 return 'contactBlock';
+        //           case 3:
+        //                 return 'contactBlock';
+        //       }
+        //   }
+        //   else {
+        //           switch (currPos) {
+        //           case 1:
+        //                 return 'rainbowBlock';
+        //            case 2:
+        //                 currentSection--;
+        //                 return 'rainbowBlock';
+        //           case 3:
+        //                 currentSection--;
+        //                 return 'rainBlock';
+        //       }
+        //   }
+        // }
 
         var gestureZone = document.getElementsByTagName('body')[0];
 
@@ -101,100 +156,52 @@ window.onload = function () {
             handleGesture();
         }, false);
     } else {
-        var _currentSection = 1;
-        var lastScrollTop = 0;
-        var wait = function wait(waitTime) {
-            return new Promise(function (resolve, reject) {
-                return setTimeout(resolve, waitTime);
-            });
-        };
+        console.log('deskkkkkk');
+        window.addEventListener('wheel', function (event) {
+            if (event.deltaY < 0) {
 
-        var _scrollToSection = function _scrollToSection(currPos, direction) {
-            var elementToScrollTo = document.getElementById(_getNextPosHash(currPos, direction));
-            window.scrollTo({
-                top: elementToScrollTo.offsetTop,
-                behavior: 'smooth'
-            });
-            console.log('sim, finalizou scroll');
-        };
-
-        var _getNextPosHash = function _getNextPosHash(currPos, direction) {
-            if (direction == 1) {
-                switch (currPos) {
-                    case 1:
-                        _currentSection++;
-                        return 'rainBlock';
-                    case 2:
-                        _currentSection++;
-                        return 'contactBlock';
-                    case 3:
-                        return 'contactBlock';
-                }
-            } else {
-                switch (currPos) {
-                    case 1:
-                        return 'rainbowBlock';
-                    case 2:
-                        _currentSection--;
-                        return 'rainbowBlock';
-                    case 3:
-                        _currentSection--;
-                        return 'rainBlock';
-                }
+                //window.setTimeout (()=> {
+                scrollToSection(currentSection, 1);
+                //}, 700);
             }
-        };
-
-        var removeScrollEventListener = function removeScrollEventListener() {
-            console.log('disabled');
-            window.removeEventListener('scroll', scrollEvents, false);
-        };
-
-        var enableScrollEventListener = function enableScrollEventListener() {
-            console.log('enabled');
-            window.addEventListener('scroll', scrollEvents, false);
-        };
-
-        var scrollEvents = function scrollEvents() {
-
-            removeScrollEventListener();
-
-            var st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st > lastScrollTop) {
-                console.log('downSCROLL');
-                _scrollToSection(_currentSection, 1);
-                (async function () {
-                    await wait(500);
-                    enableScrollEventListener();
-                })();
-            } else {
-                console.log('upSCROLL');
-
-                _scrollToSection(_currentSection, -1);
-                (async function () {
-                    await wait(400);
-                    enableScrollEventListener();
-                })();
+            if (event.deltaY > 0) {
+                //window.setTimeout (()=> {
+                scrollToSection(currentSection, -1);
+                //}, 700);
             }
-            lastScrollTop = st <= 0 ? 0 : st;
-        };
-        enableScrollEventListener();
+        });
     }
+    //     let lastScrollTop = 0;
 
-    /*     const goToTop = new Promise ((resolve) => {
-            () => {
-                resolve (window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                }));
-            }
-        }); */
+    //     let scrollToSection = (currPos, direction) => {
+    //         const elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction))
+    //         window.scrollTo({
+    //         top: elementToScrollTo.offsetTop, 
+    //         behavior: 'smooth' 
+    //       })
+    //       console.log('sim, finalizou scroll');
+    //     };  
 
-    /*     const startPage = () => {
-            goToTop
-            .then(() => {
-                enableScrollEventListener()
-            });
-        }  */
+
+    //     window.addEventListener('scroll', scrollEvents, false);
+
+
+    //     const scrollEvents = () => {
+
+    //         let st = window.pageYOffset || document.documentElement.scrollTop;
+    //         if (st > lastScrollTop){
+    //             console.log('downSCROLL');
+    //             scrollToSection(currentSection, 1);
+
+    //         } else {
+    //             console.log('upSCROLL');
+
+    //             scrollToSection(currentSection, -1);
+
+    //         }
+    //         lastScrollTop = st <= 0 ? 0 : st;
+    //     }
+    // }
 
     var generateRainDrops = function generateRainDrops() {
         var n = $(window).width() > 800 ? 100 : 30;

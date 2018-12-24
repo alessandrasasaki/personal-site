@@ -33,67 +33,125 @@ $(document).ready(() => {
 });
 
 window.onload = () => {
+    let currentSection = 1;
+    let touchstartY = 0;
+    let touchendY = 0;
+    
+    let scrollToSection = (currPos, direction) => {
+        //     const elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction))
+        //     window.scrollTo({
+        //     top: elementToScrollTo.offsetTop, 
+        //     behavior: 'smooth' 
+        //   })
+
+        switch (currPos){
+            case 1: 
+                if (direction === 1) {
+                    $("body").css({
+                        'transform': 'translateY(-100vh)',
+                        'transition': 'all 1s'
+                    });
+                    $("#switch").css({
+                        'transform': 'translateY(100vh)',
+                        'transition': 'all 1s'
+                    });
+                    currentSection++;
+                    return;
+                } 
+                return;
+            case 2: 
+                if (direction === 1) {
+                    $("body").css({
+                        'transform': 'translateY(-200vh)',
+                        'transition': 'all 1s'
+                    });
+                    $("#switch").css({
+                        'transform': 'translateY(200vh)',
+                        'transition': 'all 1s'
+                    });
+                    currentSection++;
+                    return;
+                }
+                $("body").css({
+                    'transform': 'translateY(0)',
+                    'transition': 'all 1s'
+                });
+                $("#switch").css({
+                    'transform': 'translateY(0)',
+                    'transition': 'all 1s'
+                });
+                currentSection--;
+                return;
+            case 3: 
+                if (direction === 1) {
+                    return;
+                }
+                $("body").css({
+                    'transform': 'translateY(-100vh)',
+                    'transition': 'all 1s'
+                });
+                $("#switch").css({
+                    'transform': 'translateY(100vh)',
+                    'transition': 'all 1s'
+                });
+                currentSection--;
+                return;
+        }
+       
+          console.log('sim, finalizou scroll');
+    };  
 
     if (/Mobi/.test(navigator.userAgent)) {
-        let currentSection = 1;
-        let touchstartY = 0;
-        let touchendY = 0;
+
     
-        let scrollToSection = (currPos, direction) => {
-            const elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction))
-            window.scrollTo({
-            top: elementToScrollTo.offsetTop, 
-            behavior: 'smooth' 
-          })
-          console.log('sim, finalizou scroll');
-        };  
+
         
-        let getNextPosHash = (currPos, direction) => {
-           if (direction == 1) {
-                switch (currPos) {
-                  case 1:
-                        currentSection++;
-                        return 'rainBlock';
-                   case 2:
-                       currentSection++;
-                        return 'contactBlock';
-                  case 3:
-                        return 'contactBlock';
-              }
-          }
-          else {
-                  switch (currPos) {
-                  case 1:
-                        return 'rainbowBlock';
-                   case 2:
-                        currentSection--;
-                        return 'rainbowBlock';
-                  case 3:
-                        currentSection--;
-                        return 'rainBlock';
-              }
-          }
-        }
+        // let getNextPosHash = (currPos, direction) => {
+        //    if (direction == 1) {
+        //         switch (currPos) {
+        //           case 1:
+        //                 currentSection++;
+        //                 return 'rainBlock';
+        //            case 2:
+        //                currentSection++;
+        //                 return 'contactBlock';
+        //           case 3:
+        //                 return 'contactBlock';
+        //       }
+        //   }
+        //   else {
+        //           switch (currPos) {
+        //           case 1:
+        //                 return 'rainbowBlock';
+        //            case 2:
+        //                 currentSection--;
+        //                 return 'rainbowBlock';
+        //           case 3:
+        //                 currentSection--;
+        //                 return 'rainBlock';
+        //       }
+        //   }
+        // }
 
         let gestureZone = document.getElementsByTagName('body')[0];
 
-        gestureZone.addEventListener('touchstart', function(event) {
+        gestureZone.addEventListener('touchstart', (event)=> {
             touchstartY = event.changedTouches[0].screenY;
         }, false);
 
-        gestureZone.addEventListener('touchend', function(event) {
+        gestureZone.addEventListener('touchend', (event)=> {
             touchendY = event.changedTouches[0].screenY;
             handleGesture();
         }, false); 
 
         function handleGesture() {
             console.log('CURRENTSECTION = ' + currentSection);
-            if (touchendY < touchstartY && touchstartY - touchendY > 10) {
+            if (touchendY < touchstartY && touchstartY - touchendY > 30) {
                 console.log('touchstartY: ' + touchstartY);
                 console.log('touchendY: ' + touchendY);
                 scrollToSection(currentSection, 1);
             }
-            if (touchendY > touchstartY && touchendY - touchstartY > 10) {
+            if (touchendY > touchstartY && touchendY - touchstartY > 30) {
                 console.log('touchstartY: ' + touchstartY);
                 console.log('touchendY: ' + touchendY);
                 console.log('up');
@@ -102,97 +160,56 @@ window.onload = () => {
         }
     }
     else {
-        let currentSection = 1;
-        let lastScrollTop = 0;
-        const wait = waitTime => new Promise((resolve, reject)=> setTimeout(resolve, waitTime));
+        console.log('deskkkkkk');
+        window.addEventListener('wheel', function(event) {
+            if (event.deltaY < 0) {
 
-        let scrollToSection = (currPos, direction) => {
-            const elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction))
-            window.scrollTo({
-            top: elementToScrollTo.offsetTop, 
-            behavior: 'smooth' 
-          })
-          console.log('sim, finalizou scroll');
-        };  
-        
-        let getNextPosHash = (currPos, direction) => {
-           if (direction == 1) {
-                switch (currPos) {
-                  case 1:
-                        currentSection++;
-                        return 'rainBlock';
-                   case 2:
-                       currentSection++;
-                        return 'contactBlock';
-                  case 3:
-                        return 'contactBlock';
-              }
-          }
-          else {
-                  switch (currPos) {
-                  case 1:
-                        return 'rainbowBlock';
-                   case 2:
-                        currentSection--;
-                        return 'rainbowBlock';
-                  case 3:
-                        currentSection--;
-                        return 'rainBlock';
-              }
-          }
-        }
-       
-        const removeScrollEventListener = () => {
-            console.log('disabled');
-            window.removeEventListener('scroll', scrollEvents, false);
-        }
-    
-        const enableScrollEventListener = () => {
-            console.log('enabled');
-            window.addEventListener('scroll', scrollEvents, false);
-        }
-    
-        const scrollEvents = () => {
-            
-            removeScrollEventListener();
-    
-            let st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st > lastScrollTop){
-                console.log('downSCROLL');
-                scrollToSection(currentSection, 1);
-                (async () => { 
-                    await wait(500); 
-                    enableScrollEventListener() })()
-    
-            } else {
-                console.log('upSCROLL');
-    
-                scrollToSection(currentSection, -1);
-                (async () => { 
-                    await wait(400); 
-                    enableScrollEventListener() })()
-                
+                //window.setTimeout (()=> {
+                    scrollToSection(currentSection, 1);
+                //}, 700);
+              
             }
-            lastScrollTop = st <= 0 ? 0 : st;
-        }
-        enableScrollEventListener();
+            if (event.deltaY > 0) {
+                //window.setTimeout (()=> {
+                    scrollToSection(currentSection, -1);
+                //}, 700);
+            }
+          });
+
     }
+    //     let lastScrollTop = 0;
 
-/*     const goToTop = new Promise ((resolve) => {
-        () => {
-            resolve (window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            }));
-        }
-    }); */
+    //     let scrollToSection = (currPos, direction) => {
+    //         const elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction))
+    //         window.scrollTo({
+    //         top: elementToScrollTo.offsetTop, 
+    //         behavior: 'smooth' 
+    //       })
+    //       console.log('sim, finalizou scroll');
+    //     };  
+        
+   
+    
 
-/*     const startPage = () => {
-        goToTop
-        .then(() => {
-            enableScrollEventListener()
-        });
-    }  */
+    //     window.addEventListener('scroll', scrollEvents, false);
+        
+    
+    //     const scrollEvents = () => {
+    
+    //         let st = window.pageYOffset || document.documentElement.scrollTop;
+    //         if (st > lastScrollTop){
+    //             console.log('downSCROLL');
+    //             scrollToSection(currentSection, 1);
+    
+    //         } else {
+    //             console.log('upSCROLL');
+    
+    //             scrollToSection(currentSection, -1);
+                
+    //         }
+    //         lastScrollTop = st <= 0 ? 0 : st;
+    //     }
+    // }
 
     const generateRainDrops = () => {
         const n = $(window).width() > 800 ? 100 : 30;
