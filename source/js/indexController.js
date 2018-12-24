@@ -97,42 +97,9 @@ window.onload = () => {
                 currentSection--;
                 return;
         }
-       
-          console.log('sim, finalizou scroll');
     };  
 
     if (/Mobi/.test(navigator.userAgent)) {
-
-    
-
-        
-        // let getNextPosHash = (currPos, direction) => {
-        //    if (direction == 1) {
-        //         switch (currPos) {
-        //           case 1:
-        //                 currentSection++;
-        //                 return 'rainBlock';
-        //            case 2:
-        //                currentSection++;
-        //                 return 'contactBlock';
-        //           case 3:
-        //                 return 'contactBlock';
-        //       }
-        //   }
-        //   else {
-        //           switch (currPos) {
-        //           case 1:
-        //                 return 'rainbowBlock';
-        //            case 2:
-        //                 currentSection--;
-        //                 return 'rainbowBlock';
-        //           case 3:
-        //                 currentSection--;
-        //                 return 'rainBlock';
-        //       }
-        //   }
-        // }
-
         let gestureZone = document.getElementsByTagName('body')[0];
 
         gestureZone.addEventListener('touchstart', (event)=> {
@@ -145,71 +112,26 @@ window.onload = () => {
         }, false); 
 
         function handleGesture() {
-            console.log('CURRENTSECTION = ' + currentSection);
             if (touchendY < touchstartY && touchstartY - touchendY > 30) {
-                console.log('touchstartY: ' + touchstartY);
-                console.log('touchendY: ' + touchendY);
                 scrollToSection(currentSection, 1);
             }
             if (touchendY > touchstartY && touchendY - touchstartY > 30) {
-                console.log('touchstartY: ' + touchstartY);
-                console.log('touchendY: ' + touchendY);
-                console.log('up');
                 scrollToSection(currentSection, -1);
             }
         }
     }
     else {
-        console.log('deskkkkkk');
         window.addEventListener('wheel', function(event) {
             if (event.deltaY < 0) {
+                scrollToSection(currentSection, 1);
 
-                //window.setTimeout (()=> {
-                    scrollToSection(currentSection, 1);
-                //}, 700);
               
             }
             if (event.deltaY > 0) {
-                //window.setTimeout (()=> {
-                    scrollToSection(currentSection, -1);
-                //}, 700);
+                scrollToSection(currentSection, -1);
             }
           });
-
     }
-    //     let lastScrollTop = 0;
-
-    //     let scrollToSection = (currPos, direction) => {
-    //         const elementToScrollTo = document.getElementById(getNextPosHash(currPos, direction))
-    //         window.scrollTo({
-    //         top: elementToScrollTo.offsetTop, 
-    //         behavior: 'smooth' 
-    //       })
-    //       console.log('sim, finalizou scroll');
-    //     };  
-        
-   
-    
-
-    //     window.addEventListener('scroll', scrollEvents, false);
-        
-    
-    //     const scrollEvents = () => {
-    
-    //         let st = window.pageYOffset || document.documentElement.scrollTop;
-    //         if (st > lastScrollTop){
-    //             console.log('downSCROLL');
-    //             scrollToSection(currentSection, 1);
-    
-    //         } else {
-    //             console.log('upSCROLL');
-    
-    //             scrollToSection(currentSection, -1);
-                
-    //         }
-    //         lastScrollTop = st <= 0 ? 0 : st;
-    //     }
-    // }
 
     const generateRainDrops = () => {
         const n = $(window).width() > 800 ? 100 : 30;
@@ -220,4 +142,3 @@ window.onload = () => {
     
     generateRainDrops();
 }
-//scrollIntoView - jQuery
