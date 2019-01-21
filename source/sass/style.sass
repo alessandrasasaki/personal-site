@@ -5,16 +5,27 @@ html
 
 body 
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Karla', sans-serif;
   overflow-x: hidden;
+
+  .black-stroke
+    text-shadow: -1px -1px 0 #000, 0px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, -1px 0px 0 #000;
+
+  .fade-in-animation
+    animation: fade-in;
+    animation-duration: 5s;
+  
+  .fade-in-delay-1
+    animation-delay: 1s;
+
+  .fade-in-delay-3
+    animation-delay: 3s;
+  
   /*** RAINBOW ***/
   .rainbow-container
     height: 100vh;
     width: 100vw;
     font-size: 22px;
-    animation: rainbow-background;
-    animation-duration: 25s;
-    animation-iteration-count: infinite;
     position: relative;
     margin: 0;
     display: flex;
@@ -23,15 +34,15 @@ body
     justify-content: center;
     align-content: center;
     font-weight: bold;
+    background-image: url("./../../img/background2.jpg");
+    background-size: cover;
 
     .switchLabel
       font-size: 12px;
       display: flex;
       align-items: center;
-      text-stroke: 1px black;
-      color: white;
-      text-shadow: -1px -1px 0 #000, 0px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, -1px 0px 0 #000;
-      
+      text-stroke: 1px #000;
+      color: #FFF;
 
     .switch
       z-index: 1;
@@ -60,7 +71,7 @@ body
       border-radius: 20px;
       color: transparent;
       transition: background-color 500ms ease;
-      box-shadow: 0px 0px 2px white;
+      box-shadow: 0px 0px 2px #FFF;
       &:after 
         transition: right 500ms ease; 
         background-color: 500ms ease;
@@ -88,12 +99,14 @@ body
     text-align: center;
     display: flex;
     justify-content: center;
+    color: #FFF;
 
   .rainbow__text--highlighted
     text-align: center;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Rubik', sans-serif;
     display: flex;
     justify-content: center;
+    animation: rainbow-text 10s infinite, fade-in 5s;
 
   /*** RAIN ***/
   
@@ -103,7 +116,7 @@ body
     font-size: 22px;
     margin: 0
     padding: 0
-    color: white;
+    color: #FFF;
     position: relative;
     background: linear-gradient(to bottom, #020202, #011627);
     display: flex;
@@ -168,13 +181,15 @@ body
     align-items: center;
 
   .rain__text, .rain__text--2
+    opacity: 0;
     text-align: center;
     display: flex;
     justify-content: center;
 
   .rain__text--highlighted
+    opacity: 0;
     text-align: center;
-    font-family: 'Neucha', cursive;
+    font-family: 'Rubik', sans-serif;
     display: flex;
     justify-content: center;
 
@@ -190,7 +205,7 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    color: white;
+    color: #FFF;
     
     @media screen and (max-width: 800px)
       align-items: center;
@@ -250,9 +265,8 @@ body
     bottom: 2px;
     font-size: 12px;
     text-align: right;
-    color: white;
+    color: #FFF;
     z-index: 2;
-
 
 /*** ANIMATIONS ***/
 @keyframes pulse 
@@ -271,25 +285,24 @@ body
     opacity: 0.2;
     transform: translate(0, 100vh);
   
-@keyframes rainbow-background
+@keyframes rainbow-text
   0%, 100%
-    background: #A40606;
-    color: black;
+    color: #A40606;
   15%
-    background: #D7CF07;
-    color: black;
+    color: #D7CF07;
   30%
-    background: #D98324;
-    color: black;
+    color: #D98324;
   45%
-    background: #70AE6E;
-    color: black;
+    color: #70AE6E;
   60%
-    background: #19647E;
-    color: white;
+    color: #19647E;
   75%
-    background: #3D2B3D;
-    color: white;
+    color: #3D2B3D;
   90%
-    background: #3626A7;
-    color: white;
+    color: #3626A7;
+
+@keyframes fade-in
+  0%
+    opacity: 0;
+  100%
+    opacity: 1;

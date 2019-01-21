@@ -12,9 +12,9 @@ $(document).ready(() => {
             $('.rain__text--highlighted').text(`Que mantêm minha esperança viva'`);
             $('.contact__subtitle').text(`Desenvolvedora Front-end`);
             $('.contact__text').text(`São Paulo - Brasil`);
-            $('#curriculum').text(`Currículo`);
+            $('#curriculum').text(`♦ Currículo`);
             $('#curriculum').attr('href', `http://alessandrasasaki.com/cas/AS.pdf`);
-            $('#summoner').text(`Status do invocador`);
+            $('#summoner').text(`♦ Status do invocador`);
         }
         else {
             $('.switchLabel').text(`ENGLISH`);
@@ -25,9 +25,9 @@ $(document).ready(() => {
             $('.rain__text--highlighted').text(`That keep my hopes alive'`);
             $('.contact__subtitle').text(`Front-end developer`);
             $('.contact__text').text(`São Paulo - Brazil`);
-            $("#curriculum").text(`Curriculum`);
+            $("#curriculum").text(`♦ Curriculum`);
             $('#curriculum').attr('href', 'teste');
-            $('#summoner').text(`Summoner stats`);
+            $('#summoner').text(`♦ Summoner stats`);
         }
     });
 });
@@ -56,6 +56,8 @@ window.onload = () => {
                         'transition': 'all 1s'
                     });
                     currentSection++;
+                    removeAnimations();
+                    fadeInAnimation(currentSection);
                     return;
                 } 
                 return;
@@ -70,6 +72,8 @@ window.onload = () => {
                         'transition': 'all 1s'
                     });
                     currentSection++;
+                    removeAnimations();
+                    fadeInAnimation(currentSection);
                     return;
                 }
                 $("body").css({
@@ -80,7 +84,9 @@ window.onload = () => {
                     'transform': 'translateY(0)',
                     'transition': 'all 1s'
                 });
-                currentSection--;
+                currentSection--
+                removeAnimations();
+                fadeInAnimation(currentSection);
                 return;
             case 3: 
                 if (direction === 1) {
@@ -94,9 +100,44 @@ window.onload = () => {
                     'transform': 'translateY(100vh)',
                     'transition': 'all 1s'
                 });
-                currentSection--;
+                currentSection--
+                removeAnimations();
+                fadeInAnimation(currentSection);
                 return;
         }
+    };  
+
+    let fadeInAnimation = (currentSection) => {
+        console.log(currentSection);
+        
+        switch (currentSection){
+            case 1: 
+                $(".rainbow__text").addClass("fade-in-animation");
+                return;
+            case 2: 
+                $(".rain__text").addClass("fade-in-animation");
+                $(".rain__text--2").addClass("fade-in-animation fade-in-delay-1");
+                $(".rain__text--highlighted").addClass("fade-in-animation fade-in-delay-3");
+                return;
+
+            case 3: 
+                $(".contact__title").addClass("fade-in-animation");
+                $(".contact__subtitle").addClass("fade-in-animation fade-in-delay-1");
+                $(".contact__text").addClass("fade-in-animation fade-in-delay-1");
+                $(".contact__link").addClass("fade-in-animation fade-in-delay-3");
+                return;
+        }
+    };  
+
+    let removeAnimations = () => {
+        $(".rainbow__text").removeClass("fade-in-animation");
+        $(".rain__text").removeClass("fade-in-animation");
+        $(".rain__text--2").removeClass("fade-in-animation fade-in-delay-1");
+        $(".rain__text--highlighted").removeClass("fade-in-animation fade-in-delay-3");
+        $(".contact__title").removeClass("fade-in-animation");
+        $(".contact__subtitle").removeClass("fade-in-animation fade-in-delay-1");
+        $(".contact__text").removeClass("fade-in-animation fade-in-delay-1");
+        $(".contact__link").removeClass("fade-in-animation fade-in-delay-3");
     };  
 
     if (/Mobi/.test(navigator.userAgent)) {
@@ -124,8 +165,6 @@ window.onload = () => {
         window.addEventListener('wheel', function(event) {
             if (event.deltaY < 0) {
                 scrollToSection(currentSection, 1);
-
-              
             }
             if (event.deltaY > 0) {
                 scrollToSection(currentSection, -1);
@@ -141,4 +180,5 @@ window.onload = () => {
     } 
     
     generateRainDrops();
+    fadeInAnimation(1);
 }
