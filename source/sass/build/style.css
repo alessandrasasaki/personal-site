@@ -13,12 +13,12 @@ body {
   body .black-stroke {
     text-shadow: -1px -1px 0 #000, 0px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, -1px 0px 0 #000; }
   body .fade-in-animation {
-    animation: fade-in;
-    animation-duration: 5s; }
+    animation: fade-in 5s;
+    animation-fill-mode: forwards; }
   body .fade-in-delay-1 {
     animation-delay: 1s; }
-  body .fade-in-delay-3 {
-    animation-delay: 3s; }
+  body .fade-in-delay-2 {
+    animation-delay: 2s; }
   body .rainbow-container {
     height: 100vh;
     width: 100vw;
@@ -85,11 +85,13 @@ body {
       right: 3px;
       background-color: #EFF0F3; }
   body .rainbow__text {
+    opacity: 0;
     text-align: center;
     display: flex;
     justify-content: center;
     color: #FFF; }
   body .rainbow__text--highlighted {
+    opacity: 0;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     display: flex;
@@ -123,656 +125,656 @@ body {
         animation: rain 0.8s infinite ease-out; }
       @media screen and (max-width: 800px) {
         body .rain-container .rain .rain-drop:nth-child(1) {
-          height: 27px;
-          top: 3px;
-          animation-delay: -1.5s;
+          height: 36px;
+          top: 12px;
+          animation-delay: -3s;
           animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(2) {
-          height: 10px;
-          top: 10px;
-          animation-delay: -2.5s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(3) {
-          height: 40px;
-          top: 13px;
-          animation-delay: -4s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(4) {
-          height: 16px;
-          top: 11px;
+          height: 33px;
+          top: 2px;
           animation-delay: -1.5s;
           animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(3) {
+          height: 35px;
+          top: 10px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(4) {
+          height: 4px;
+          top: 5px;
+          animation-delay: -3s;
+          animation-duration: 1s; }
         body .rain-container .rain .rain-drop:nth-child(5) {
-          height: 32px;
-          top: 9px;
+          height: 37px;
+          top: 12px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(6) {
+          height: 30px;
+          top: 6px;
           animation-delay: -4s;
           animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(6) {
-          height: 16px;
+        body .rain-container .rain .rain-drop:nth-child(7) {
+          height: 29px;
+          top: 3px;
+          animation-delay: -4s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(8) {
+          height: 20px;
           top: 2px;
           animation-delay: -3s;
           animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(7) {
-          height: 6px;
-          top: 8px;
-          animation-delay: -1.5s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(8) {
-          height: 31px;
-          top: 4px;
-          animation-delay: -1.5s;
-          animation-duration: 1.5s; }
         body .rain-container .rain .rain-drop:nth-child(9) {
-          height: 2px;
-          top: 10px;
-          animation-delay: -1.5s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(10) {
-          height: 29px;
-          top: 5px;
-          animation-delay: -1.5s;
+          height: 39px;
+          top: 15px;
+          animation-delay: -3.5s;
           animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(10) {
+          height: 35px;
+          top: 8px;
+          animation-delay: -4s;
+          animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(11) {
-          height: 30px;
-          top: 10px;
+          height: 3px;
+          top: 9px;
           animation-delay: -3s;
           animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(12) {
-          height: 22px;
-          top: 4px;
-          animation-delay: -4s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(13) {
-          height: 28px;
-          top: 15px;
-          animation-delay: -2s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(14) {
-          height: 33px;
-          top: 13px;
-          animation-delay: -4s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(15) {
-          height: 23px;
-          top: 2px;
-          animation-delay: -3.5s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(16) {
-          height: 5px;
-          top: 3px;
+          height: 11px;
+          top: 6px;
           animation-delay: -2.5s;
           animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(17) {
-          height: 16px;
-          top: 11px;
-          animation-delay: -2s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(18) {
-          height: 31px;
-          top: 5px;
-          animation-delay: -2s;
+        body .rain-container .rain .rain-drop:nth-child(13) {
+          height: 25px;
+          top: 14px;
+          animation-delay: -4s;
           animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(19) {
+        body .rain-container .rain .rain-drop:nth-child(14) {
+          height: 38px;
+          top: 14px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(15) {
+          height: 13px;
+          top: 10px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(16) {
           height: 21px;
-          top: 13px;
-          animation-delay: -3.5s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(20) {
-          height: 37px;
           top: 9px;
-          animation-delay: -2s;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(17) {
+          height: 10px;
+          top: 1px;
+          animation-delay: -3s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(18) {
+          height: 11px;
+          top: 7px;
+          animation-delay: -4s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(19) {
+          height: 39px;
+          top: 8px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(20) {
+          height: 5px;
+          top: 13px;
+          animation-delay: -3s;
           animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(21) {
-          height: 37px;
-          top: 10px;
-          animation-delay: -2s;
+          height: 23px;
+          top: 8px;
+          animation-delay: -1.5s;
           animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(22) {
-          height: 9px;
-          top: 15px;
-          animation-delay: -4s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(23) {
-          height: 5px;
-          top: 1px;
+          height: 6px;
+          top: 9px;
           animation-delay: -2s;
           animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(24) {
-          height: 25px;
-          top: 15px;
-          animation-delay: -3.5s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(25) {
-          height: 27px;
+        body .rain-container .rain .rain-drop:nth-child(23) {
+          height: 8px;
           top: 2px;
-          animation-delay: -4s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(26) {
-          height: 40px;
-          top: 14px;
-          animation-delay: -3s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(27) {
-          height: 19px;
-          top: 4px;
-          animation-delay: -1.5s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(28) {
-          height: 37px;
-          top: 7px;
           animation-delay: -3s;
           animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(29) {
-          height: 24px;
-          top: 14px;
+        body .rain-container .rain .rain-drop:nth-child(24) {
+          height: 9px;
+          top: 15px;
           animation-delay: -3.5s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(30) {
-          height: 17px;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(25) {
+          height: 28px;
           top: 8px;
           animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(26) {
+          height: 1px;
+          top: 15px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(27) {
+          height: 5px;
+          top: 7px;
+          animation-delay: -3.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(28) {
+          height: 32px;
+          top: 1px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(29) {
+          height: 37px;
+          top: 6px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(30) {
+          height: 7px;
+          top: 13px;
+          animation-delay: -3.5s;
           animation-duration: 2.5s; } }
       @media screen and (min-width: 800px) {
         body .rain-container .rain .rain-drop:nth-child(1) {
-          height: 20px;
-          top: 4px;
+          height: 17px;
+          top: 12px;
           animation-delay: -1.5s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(2) {
-          height: 15px;
-          top: 10px;
-          animation-delay: -3s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(3) {
-          height: 1px;
-          top: 10px;
-          animation-delay: -3.5s;
           animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(4) {
-          height: 16px;
+        body .rain-container .rain .rain-drop:nth-child(2) {
+          height: 21px;
+          top: 8px;
+          animation-delay: -1.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(3) {
+          height: 18px;
           top: 3px;
           animation-delay: -3s;
           animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(4) {
+          height: 37px;
+          top: 11px;
+          animation-delay: -1.5s;
+          animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(5) {
-          height: 21px;
-          top: 6px;
+          height: 39px;
+          top: 14px;
           animation-delay: -3.5s;
-          animation-duration: 2.5s; }
+          animation-duration: 1.5s; }
         body .rain-container .rain .rain-drop:nth-child(6) {
+          height: 29px;
+          top: 10px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(7) {
+          height: 34px;
+          top: 1px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(8) {
+          height: 1px;
+          top: 2px;
+          animation-delay: -1.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(9) {
           height: 21px;
           top: 4px;
           animation-delay: -4s;
           animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(7) {
-          height: 39px;
-          top: 8px;
-          animation-delay: -4s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(8) {
-          height: 14px;
-          top: 11px;
-          animation-delay: -2.5s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(9) {
-          height: 33px;
-          top: 15px;
-          animation-delay: -2s;
-          animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(10) {
-          height: 5px;
-          top: 6px;
-          animation-delay: -4s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(11) {
-          height: 34px;
-          top: 6px;
-          animation-delay: -1.5s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(12) {
-          height: 1px;
-          top: 13px;
-          animation-delay: -2.5s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(13) {
-          height: 26px;
-          top: 15px;
-          animation-delay: -2s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(14) {
-          height: 22px;
-          top: 15px;
-          animation-delay: -4s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(15) {
-          height: 31px;
-          top: 7px;
-          animation-delay: -4s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(16) {
-          height: 11px;
-          top: 9px;
-          animation-delay: -3s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(17) {
           height: 33px;
           top: 1px;
-          animation-delay: -2s;
+          animation-delay: -4s;
           animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(18) {
-          height: 1px;
-          top: 1px;
-          animation-delay: -4s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(19) {
-          height: 22px;
-          top: 15px;
-          animation-delay: -4s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(20) {
-          height: 25px;
-          top: 6px;
+        body .rain-container .rain .rain-drop:nth-child(11) {
+          height: 26px;
+          top: 7px;
           animation-delay: -3.5s;
           animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(21) {
-          height: 18px;
-          top: 10px;
-          animation-delay: -3s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(22) {
-          height: 7px;
-          top: 9px;
+        body .rain-container .rain .rain-drop:nth-child(12) {
+          height: 4px;
+          top: 13px;
           animation-delay: -2.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(13) {
+          height: 6px;
+          top: 3px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(14) {
+          height: 20px;
+          top: 6px;
+          animation-delay: -3.5s;
           animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(15) {
+          height: 5px;
+          top: 9px;
+          animation-delay: -2s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(16) {
+          height: 23px;
+          top: 13px;
+          animation-delay: -4s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(17) {
+          height: 15px;
+          top: 13px;
+          animation-delay: -3.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(18) {
+          height: 10px;
+          top: 5px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(19) {
+          height: 20px;
+          top: 3px;
+          animation-delay: -3s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(20) {
+          height: 35px;
+          top: 4px;
+          animation-delay: -1.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(21) {
+          height: 16px;
+          top: 6px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(22) {
+          height: 2px;
+          top: 3px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(23) {
           height: 14px;
-          top: 15px;
-          animation-delay: -3s;
-          animation-duration: 2.5s; }
+          top: 12px;
+          animation-delay: -1.5s;
+          animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(24) {
-          height: 24px;
-          top: 2px;
-          animation-delay: -2.5s;
-          animation-duration: 1.5s; }
+          height: 29px;
+          top: 5px;
+          animation-delay: -2s;
+          animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(25) {
-          height: 30px;
+          height: 3px;
           top: 7px;
-          animation-delay: -1.5s;
-          animation-duration: 2.5s; }
+          animation-delay: -3.5s;
+          animation-duration: 1s; }
         body .rain-container .rain .rain-drop:nth-child(26) {
-          height: 16px;
-          top: 9px;
-          animation-delay: -1.5s;
-          animation-duration: 2.5s; }
+          height: 12px;
+          top: 12px;
+          animation-delay: -3.5s;
+          animation-duration: 1.5s; }
         body .rain-container .rain .rain-drop:nth-child(27) {
-          height: 35px;
-          top: 6px;
+          height: 25px;
+          top: 10px;
           animation-delay: -2.5s;
           animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(28) {
-          height: 3px;
-          top: 12px;
-          animation-delay: -3s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(29) {
-          height: 32px;
-          top: 8px;
-          animation-delay: -1.5s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(30) {
-          height: 38px;
-          top: 6px;
-          animation-delay: -1.5s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(31) {
           height: 15px;
           top: 7px;
-          animation-delay: -2s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(32) {
-          height: 22px;
-          top: 3px;
           animation-delay: -3.5s;
           animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(33) {
+        body .rain-container .rain .rain-drop:nth-child(29) {
+          height: 21px;
+          top: 9px;
+          animation-delay: -3.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(30) {
+          height: 26px;
+          top: 4px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(31) {
+          height: 11px;
+          top: 12px;
+          animation-delay: -2.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(32) {
           height: 12px;
-          top: 6px;
+          top: 11px;
+          animation-delay: -2.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(33) {
+          height: 24px;
+          top: 11px;
           animation-delay: -3s;
           animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(34) {
-          height: 10px;
-          top: 13px;
-          animation-delay: -1.5s;
-          animation-duration: 2.5s; }
+          height: 12px;
+          top: 8px;
+          animation-delay: -2.5s;
+          animation-duration: 1s; }
         body .rain-container .rain .rain-drop:nth-child(35) {
-          height: 1px;
-          top: 15px;
-          animation-delay: -3s;
+          height: 37px;
+          top: 1px;
+          animation-delay: -4s;
           animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(36) {
-          height: 19px;
-          top: 4px;
-          animation-delay: -4s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(37) {
-          height: 18px;
-          top: 7px;
+          height: 14px;
+          top: 1px;
           animation-delay: -1.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(37) {
+          height: 22px;
+          top: 8px;
+          animation-delay: -2.5s;
           animation-duration: 1s; }
         body .rain-container .rain .rain-drop:nth-child(38) {
-          height: 20px;
-          top: 1px;
-          animation-delay: -3.5s;
-          animation-duration: 3s; }
+          height: 5px;
+          top: 6px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(39) {
-          height: 28px;
-          top: 12px;
-          animation-delay: -2s;
+          height: 5px;
+          top: 2px;
+          animation-delay: -1.5s;
           animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(40) {
-          height: 28px;
-          top: 13px;
-          animation-delay: -3s;
+          height: 2px;
+          top: 15px;
+          animation-delay: -2s;
           animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(41) {
-          height: 20px;
-          top: 5px;
-          animation-delay: -2.5s;
+          height: 3px;
+          top: 4px;
+          animation-delay: -3.5s;
           animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(42) {
-          height: 9px;
-          top: 11px;
-          animation-delay: -3.5s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(43) {
-          height: 10px;
-          top: 2px;
+          height: 23px;
+          top: 7px;
           animation-delay: -3s;
           animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(43) {
+          height: 31px;
+          top: 15px;
+          animation-delay: -3.5s;
+          animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(44) {
-          height: 11px;
-          top: 14px;
-          animation-delay: -4s;
-          animation-duration: 2.5s; }
+          height: 19px;
+          top: 13px;
+          animation-delay: -1.5s;
+          animation-duration: 1s; }
         body .rain-container .rain .rain-drop:nth-child(45) {
-          height: 36px;
+          height: 38px;
           top: 13px;
           animation-delay: -2s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(46) {
-          height: 33px;
-          top: 5px;
-          animation-delay: -3s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(47) {
-          height: 29px;
-          top: 12px;
-          animation-delay: -2s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(48) {
-          height: 17px;
-          top: 2px;
-          animation-delay: -2s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(49) {
-          height: 35px;
-          top: 10px;
-          animation-delay: -1.5s;
           animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(46) {
+          height: 29px;
+          top: 8px;
+          animation-delay: -4s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(47) {
+          height: 3px;
+          top: 13px;
+          animation-delay: -4s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(48) {
+          height: 34px;
+          top: 6px;
+          animation-delay: -2.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(49) {
+          height: 37px;
+          top: 6px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(50) {
           height: 3px;
-          top: 12px;
-          animation-delay: -4s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(51) {
-          height: 6px;
           top: 1px;
-          animation-delay: -3s;
+          animation-delay: -2.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(51) {
+          height: 17px;
+          top: 7px;
+          animation-delay: -2s;
           animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(52) {
-          height: 23px;
-          top: 8px;
-          animation-delay: -3s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(53) {
-          height: 38px;
-          top: 3px;
+          height: 30px;
+          top: 11px;
           animation-delay: -2s;
           animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(54) {
+        body .rain-container .rain .rain-drop:nth-child(53) {
           height: 10px;
-          top: 6px;
-          animation-delay: -3.5s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(55) {
-          height: 25px;
-          top: 11px;
-          animation-delay: -2.5s;
+          top: 7px;
+          animation-delay: -1.5s;
           animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(56) {
-          height: 13px;
-          top: 8px;
-          animation-delay: -3.5s;
+        body .rain-container .rain .rain-drop:nth-child(54) {
+          height: 33px;
+          top: 1px;
+          animation-delay: -3s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(55) {
+          height: 2px;
+          top: 7px;
+          animation-delay: -1.5s;
           animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(56) {
+          height: 26px;
+          top: 15px;
+          animation-delay: -2s;
+          animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(57) {
-          height: 31px;
-          top: 5px;
-          animation-delay: -2.5s;
+          height: 17px;
+          top: 10px;
+          animation-delay: -4s;
           animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(58) {
           height: 3px;
-          top: 1px;
-          animation-delay: -2.5s;
+          top: 15px;
+          animation-delay: -3s;
           animation-duration: 1s; }
         body .rain-container .rain .rain-drop:nth-child(59) {
-          height: 36px;
-          top: 6px;
-          animation-delay: -2s;
-          animation-duration: 2.5s; }
+          height: 17px;
+          top: 15px;
+          animation-delay: -4s;
+          animation-duration: 1s; }
         body .rain-container .rain .rain-drop:nth-child(60) {
-          height: 29px;
-          top: 15px;
-          animation-delay: -3s;
-          animation-duration: 2.5s; }
+          height: 31px;
+          top: 7px;
+          animation-delay: -2.5s;
+          animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(61) {
-          height: 8px;
-          top: 13px;
-          animation-delay: -2s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(62) {
-          height: 34px;
-          top: 2px;
-          animation-delay: -1.5s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(63) {
-          height: 26px;
-          top: 6px;
-          animation-delay: -2s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(64) {
-          height: 4px;
-          top: 8px;
+          height: 22px;
+          top: 7px;
           animation-delay: -3s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(65) {
-          height: 37px;
-          top: 14px;
-          animation-delay: -3.5s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(66) {
-          height: 7px;
-          top: 5px;
-          animation-delay: -2s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(67) {
-          height: 38px;
-          top: 1px;
-          animation-delay: -2.5s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(68) {
-          height: 3px;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(62) {
+          height: 6px;
+          top: 15px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(63) {
+          height: 40px;
           top: 15px;
           animation-delay: -2.5s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(69) {
-          height: 33px;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(64) {
+          height: 29px;
+          top: 9px;
+          animation-delay: -2.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(65) {
+          height: 8px;
           top: 12px;
           animation-delay: -4s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(70) {
-          height: 17px;
-          top: 5px;
-          animation-delay: -3s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(71) {
-          height: 16px;
-          top: 5px;
-          animation-delay: -3.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(66) {
+          height: 5px;
+          top: 1px;
+          animation-delay: -4s;
           animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(67) {
+          height: 16px;
+          top: 15px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(68) {
+          height: 25px;
+          top: 7px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(69) {
+          height: 14px;
+          top: 10px;
+          animation-delay: -4s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(70) {
+          height: 20px;
+          top: 7px;
+          animation-delay: -2s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(71) {
+          height: 13px;
+          top: 1px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(72) {
           height: 9px;
+          top: 6px;
+          animation-delay: -4s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(73) {
+          height: 32px;
+          top: 11px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(74) {
+          height: 13px;
+          top: 2px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(75) {
+          height: 27px;
           top: 14px;
           animation-delay: -3.5s;
           animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(73) {
-          height: 5px;
-          top: 1px;
+        body .rain-container .rain .rain-drop:nth-child(76) {
+          height: 2px;
+          top: 12px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(77) {
+          height: 38px;
+          top: 9px;
+          animation-delay: -4s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(78) {
+          height: 33px;
+          top: 15px;
           animation-delay: -3s;
           animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(74) {
-          height: 6px;
-          top: 1px;
-          animation-delay: -2.5s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(75) {
+        body .rain-container .rain .rain-drop:nth-child(79) {
+          height: 14px;
+          top: 4px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(80) {
           height: 20px;
+          top: 15px;
+          animation-delay: -1.5s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(81) {
+          height: 30px;
+          top: 1px;
+          animation-delay: -1.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(82) {
+          height: 19px;
+          top: 4px;
+          animation-delay: -3.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(83) {
+          height: 25px;
+          top: 2px;
+          animation-delay: -3s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(84) {
+          height: 18px;
           top: 10px;
           animation-delay: -4s;
           animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(76) {
-          height: 36px;
-          top: 11px;
-          animation-delay: -2.5s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(77) {
-          height: 10px;
-          top: 14px;
-          animation-delay: -3.5s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(78) {
-          height: 27px;
-          top: 6px;
-          animation-delay: -3s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(79) {
-          height: 34px;
-          top: 8px;
-          animation-delay: -1.5s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(80) {
-          height: 2px;
-          top: 10px;
-          animation-delay: -3.5s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(81) {
-          height: 10px;
-          top: 11px;
-          animation-delay: -3s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(82) {
-          height: 27px;
-          top: 9px;
-          animation-delay: -1.5s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(83) {
-          height: 4px;
-          top: 15px;
-          animation-delay: -1.5s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(84) {
-          height: 18px;
-          top: 15px;
-          animation-delay: -2s;
-          animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(85) {
-          height: 25px;
-          top: 13px;
+          height: 7px;
+          top: 8px;
           animation-delay: -3.5s;
           animation-duration: 3s; }
         body .rain-container .rain .rain-drop:nth-child(86) {
-          height: 28px;
-          top: 10px;
-          animation-delay: -2s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(87) {
-          height: 3px;
-          top: 7px;
-          animation-delay: -2s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(88) {
-          height: 32px;
-          top: 13px;
-          animation-delay: -4s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(89) {
-          height: 15px;
-          top: 14px;
-          animation-delay: -2s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(90) {
-          height: 17px;
-          top: 2px;
-          animation-delay: -4s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(91) {
-          height: 13px;
+          height: 35px;
           top: 12px;
           animation-delay: -2.5s;
           animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(87) {
+          height: 39px;
+          top: 12px;
+          animation-delay: -2s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(88) {
+          height: 28px;
+          top: 6px;
+          animation-delay: -3s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(89) {
+          height: 30px;
+          top: 7px;
+          animation-delay: -2s;
+          animation-duration: 1s; }
+        body .rain-container .rain .rain-drop:nth-child(90) {
+          height: 8px;
+          top: 5px;
+          animation-delay: -2.5s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(91) {
+          height: 18px;
+          top: 8px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
         body .rain-container .rain .rain-drop:nth-child(92) {
-          height: 23px;
+          height: 6px;
+          top: 9px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(93) {
+          height: 12px;
+          top: 9px;
+          animation-delay: -3.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(94) {
+          height: 7px;
+          top: 13px;
+          animation-delay: -3s;
+          animation-duration: 3s; }
+        body .rain-container .rain .rain-drop:nth-child(95) {
+          height: 1px;
+          top: 4px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(96) {
+          height: 30px;
+          top: 13px;
+          animation-delay: -2.5s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(97) {
+          height: 30px;
+          top: 12px;
+          animation-delay: -3s;
+          animation-duration: 2.5s; }
+        body .rain-container .rain .rain-drop:nth-child(98) {
+          height: 40px;
+          top: 11px;
+          animation-delay: -1.5s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(99) {
+          height: 9px;
+          top: 13px;
+          animation-delay: -3s;
+          animation-duration: 1.5s; }
+        body .rain-container .rain .rain-drop:nth-child(100) {
+          height: 3px;
           top: 15px;
           animation-delay: -4s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(93) {
-          height: 17px;
-          top: 3px;
-          animation-delay: -2s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(94) {
-          height: 37px;
-          top: 2px;
-          animation-delay: -3.5s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(95) {
-          height: 36px;
-          top: 2px;
-          animation-delay: -4s;
-          animation-duration: 1.5s; }
-        body .rain-container .rain .rain-drop:nth-child(96) {
-          height: 29px;
-          top: 14px;
-          animation-delay: -1.5s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(97) {
-          height: 39px;
-          top: 7px;
-          animation-delay: -2s;
-          animation-duration: 3s; }
-        body .rain-container .rain .rain-drop:nth-child(98) {
-          height: 7px;
-          top: 10px;
-          animation-delay: -3.5s;
-          animation-duration: 1s; }
-        body .rain-container .rain .rain-drop:nth-child(99) {
-          height: 27px;
-          top: 7px;
-          animation-delay: -1.5s;
-          animation-duration: 2.5s; }
-        body .rain-container .rain .rain-drop:nth-child(100) {
-          height: 2px;
-          top: 14px;
-          animation-delay: -2.5s;
-          animation-duration: 3s; } }
+          animation-duration: 1.5s; } }
   body .rain__content {
     position: absolute;
     display: flex;
@@ -821,6 +823,7 @@ body {
       body .contact__about {
         position: absolute; } }
   body .contact__title {
+    opacity: 0;
     display: flex;
     font-size: 28px;
     margin: 0; }
@@ -828,6 +831,7 @@ body {
       body .contact__title {
         z-index: 2; } }
   body .contact__subtitle {
+    opacity: 0;
     display: flex;
     font-size: 14px;
     margin: 0 0 40px 0; }
@@ -835,12 +839,14 @@ body {
       body .contact__subtitle {
         z-index: 2; } }
   body .contact__text {
+    opacity: 0;
     display: flex;
     color: #FFFFFA; }
     @media screen and (max-width: 800px) {
       body .contact__text {
         z-index: 2; } }
   body .contact__link {
+    opacity: 0;
     display: flex;
     font-size: 18px;
     text-decoration: none;

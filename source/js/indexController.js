@@ -117,14 +117,14 @@ window.onload = () => {
             case 2: 
                 $(".rain__text").addClass("fade-in-animation");
                 $(".rain__text--2").addClass("fade-in-animation fade-in-delay-1");
-                $(".rain__text--highlighted").addClass("fade-in-animation fade-in-delay-3");
+                $(".rain__text--highlighted").addClass("fade-in-animation fade-in-delay-2");
                 return;
 
             case 3: 
                 $(".contact__title").addClass("fade-in-animation");
                 $(".contact__subtitle").addClass("fade-in-animation fade-in-delay-1");
                 $(".contact__text").addClass("fade-in-animation fade-in-delay-1");
-                $(".contact__link").addClass("fade-in-animation fade-in-delay-3");
+                $(".contact__link").addClass("fade-in-animation fade-in-delay-2");
                 return;
         }
     };  
@@ -133,11 +133,11 @@ window.onload = () => {
         $(".rainbow__text").removeClass("fade-in-animation");
         $(".rain__text").removeClass("fade-in-animation");
         $(".rain__text--2").removeClass("fade-in-animation fade-in-delay-1");
-        $(".rain__text--highlighted").removeClass("fade-in-animation fade-in-delay-3");
+        $(".rain__text--highlighted").removeClass("fade-in-animation fade-in-delay-2");
         $(".contact__title").removeClass("fade-in-animation");
         $(".contact__subtitle").removeClass("fade-in-animation fade-in-delay-1");
         $(".contact__text").removeClass("fade-in-animation fade-in-delay-1");
-        $(".contact__link").removeClass("fade-in-animation fade-in-delay-3");
+        $(".contact__link").removeClass("fade-in-animation fade-in-delay-2");
     };  
 
     if (/Mobi/.test(navigator.userAgent)) {
@@ -163,10 +163,10 @@ window.onload = () => {
     }
     else {
         window.addEventListener('wheel', function(event) {
-            if (event.deltaY < 0) {
+            if (event.deltaY > 0) {
                 scrollToSection(currentSection, 1);
             }
-            if (event.deltaY > 0) {
+            if (event.deltaY < 0) {
                 scrollToSection(currentSection, -1);
             }
           });

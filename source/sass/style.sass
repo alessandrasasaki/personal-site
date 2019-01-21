@@ -12,14 +12,14 @@ body
     text-shadow: -1px -1px 0 #000, 0px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, -1px 0px 0 #000;
 
   .fade-in-animation
-    animation: fade-in;
-    animation-duration: 5s;
+    animation: fade-in 5s;
+    animation-fill-mode: forwards;
   
   .fade-in-delay-1
     animation-delay: 1s;
 
-  .fade-in-delay-3
-    animation-delay: 3s;
+  .fade-in-delay-2
+    animation-delay: 2s;
   
   /*** RAINBOW ***/
   .rainbow-container
@@ -96,12 +96,14 @@ body
       background-color: #EFF0F3;
 
   .rainbow__text
+    opacity: 0;
     text-align: center;
     display: flex;
     justify-content: center;
     color: #FFF;
 
   .rainbow__text--highlighted
+    opacity: 0;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     display: flex;
@@ -228,6 +230,7 @@ body
       position: absolute;
 
   .contact__title
+    opacity: 0;
     display: flex;
     font-size: 28px;
     margin: 0;
@@ -235,6 +238,7 @@ body
       z-index: 2;
 
   .contact__subtitle  
+    opacity: 0;
     display: flex;
     font-size: 14px;
     margin: 0 0 40px 0;
@@ -242,6 +246,7 @@ body
       z-index: 2;
 
   .contact__text
+    opacity: 0;
     display: flex;
     color: #FFFFFA;
     
@@ -249,6 +254,7 @@ body
       z-index: 2;
 
   .contact__link
+    opacity: 0;
     display: flex;
     font-size: 18px;
     text-decoration: none;
