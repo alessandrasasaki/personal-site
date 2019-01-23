@@ -12,11 +12,14 @@ body
     text-shadow: -1px -1px 0 #000, 0px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, -1px 0px 0 #000;
 
   .fade-in-animation
+    opacity: 1;
     animation: fade-in 5s;
     animation-fill-mode: forwards;
+
   
   .fade-in-delay-1
     animation-delay: 1s;
+    
 
   .fade-in-delay-2
     animation-delay: 2s;
@@ -34,8 +37,8 @@ body
     justify-content: center;
     align-content: center;
     font-weight: bold;
-    background-image: url("./../../img/background2.jpg");
     background-size: cover;
+    background-image: url("./../../img/background4.jpg");
 
     .switchLabel
       font-size: 12px;
@@ -95,7 +98,7 @@ body
       right: 3px;
       background-color: #EFF0F3;
 
-  .rainbow__text
+  .rainbow__text, .rainbow__text-2
     opacity: 0;
     text-align: center;
     display: flex;
@@ -103,12 +106,12 @@ body
     color: #FFF;
 
   .rainbow__text--highlighted
-    opacity: 0;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     display: flex;
     justify-content: center;
-    animation: rainbow-text 10s infinite, fade-in 5s;
+    animation: rainbow-text 10s infinite;
+    padding: 0 14px;
 
   /*** RAIN ***/
   

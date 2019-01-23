@@ -1,6 +1,11 @@
 'use strict';
 
 $(document).ready(function () {
+    if (/Mobi/.test(navigator.userAgent)) {
+        $("#rainbowBlock").css({
+            'background-position': 'bottom'
+        });
+    }
     //Language
     $('#languageSwitch').prop('checked', true);
     //Utilizado function para nao perder a referencia do this
@@ -14,9 +19,9 @@ $(document).ready(function () {
             $('.rain__text--highlighted').text('Que mant\xEAm minha esperan\xE7a viva\'');
             $('.contact__subtitle').text('Desenvolvedora Front-end');
             $('.contact__text').text('S\xE3o Paulo - Brasil');
-            $('#curriculum').text('\u2666 Curr\xEDculo');
+            $('#curriculum').text('\u25B4 Curr\xEDculo');
             $('#curriculum').attr('href', 'http://alessandrasasaki.com/cas/AS.pdf');
-            $('#summoner').text('\u2666 Status do invocador');
+            $('#summoner').text('\u25B4 Status do invocador');
         } else {
             $('.switchLabel').text('ENGLISH');
             $('.rainbow__text').text('\'My eyes constantly seek');
@@ -26,9 +31,9 @@ $(document).ready(function () {
             $('.rain__text--highlighted').text('That keep my hopes alive\'');
             $('.contact__subtitle').text('Front-end developer');
             $('.contact__text').text('S\xE3o Paulo - Brazil');
-            $("#curriculum").text('\u2666 Curriculum');
+            $("#curriculum").text('\u25B4 Curriculum');
             $('#curriculum').attr('href', 'teste');
-            $('#summoner').text('\u2666 Summoner stats');
+            $('#summoner').text('\u25B4 Summoner stats');
         }
     });
 });
@@ -114,6 +119,7 @@ window.onload = function () {
         switch (currentSection) {
             case 1:
                 $(".rainbow__text").addClass("fade-in-animation");
+                $(".rainbow__text-2").addClass("fade-in-animation fade-in-delay-1");
                 return;
             case 2:
                 $(".rain__text").addClass("fade-in-animation");
@@ -132,6 +138,7 @@ window.onload = function () {
 
     var removeAnimations = function removeAnimations() {
         $(".rainbow__text").removeClass("fade-in-animation");
+        $(".rainbow__text-2").removeClass("fade-in-animation fade-in-delay-1");
         $(".rain__text").removeClass("fade-in-animation");
         $(".rain__text--2").removeClass("fade-in-animation fade-in-delay-1");
         $(".rain__text--highlighted").removeClass("fade-in-animation fade-in-delay-2");

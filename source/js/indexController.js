@@ -1,4 +1,9 @@
 $(document).ready(() => {
+    if (/Mobi/.test(navigator.userAgent)) {
+        $("#rainbowBlock").css({
+            'background-position': 'bottom'
+        });
+    }
     //Language
     $('#languageSwitch').prop('checked', true);
     //Utilizado function para nao perder a referencia do this
@@ -12,9 +17,9 @@ $(document).ready(() => {
             $('.rain__text--highlighted').text(`Que mantêm minha esperança viva'`);
             $('.contact__subtitle').text(`Desenvolvedora Front-end`);
             $('.contact__text').text(`São Paulo - Brasil`);
-            $('#curriculum').text(`♦ Currículo`);
+            $('#curriculum').text(`▴ Currículo`);
             $('#curriculum').attr('href', `http://alessandrasasaki.com/cas/AS.pdf`);
-            $('#summoner').text(`♦ Status do invocador`);
+            $('#summoner').text(`▴ Status do invocador`);
         }
         else {
             $('.switchLabel').text(`ENGLISH`);
@@ -25,9 +30,9 @@ $(document).ready(() => {
             $('.rain__text--highlighted').text(`That keep my hopes alive'`);
             $('.contact__subtitle').text(`Front-end developer`);
             $('.contact__text').text(`São Paulo - Brazil`);
-            $("#curriculum").text(`♦ Curriculum`);
+            $("#curriculum").text(`▴ Curriculum`);
             $('#curriculum').attr('href', 'teste');
-            $('#summoner').text(`♦ Summoner stats`);
+            $('#summoner').text(`▴ Summoner stats`);
         }
     });
 });
@@ -113,6 +118,7 @@ window.onload = () => {
         switch (currentSection){
             case 1: 
                 $(".rainbow__text").addClass("fade-in-animation");
+                $(".rainbow__text-2").addClass("fade-in-animation fade-in-delay-1");
                 return;
             case 2: 
                 $(".rain__text").addClass("fade-in-animation");
@@ -131,6 +137,7 @@ window.onload = () => {
 
     let removeAnimations = () => {
         $(".rainbow__text").removeClass("fade-in-animation");
+        $(".rainbow__text-2").removeClass("fade-in-animation fade-in-delay-1");
         $(".rain__text").removeClass("fade-in-animation");
         $(".rain__text--2").removeClass("fade-in-animation fade-in-delay-1");
         $(".rain__text--highlighted").removeClass("fade-in-animation fade-in-delay-2");
