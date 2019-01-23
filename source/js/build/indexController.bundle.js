@@ -114,7 +114,6 @@ window.onload = function () {
     };
 
     var fadeInAnimation = function fadeInAnimation(currentSection) {
-        console.log(currentSection);
 
         switch (currentSection) {
             case 1:
