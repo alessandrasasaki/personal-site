@@ -13,7 +13,7 @@ $(document).ready(function () {
         if ($(this).is(':checked')) {
             $('.switchLabel').text('PORTUGU\xCAS');
             $('.rainbow__text').text('\'Meus olhos procuram constantemente');
-            $('.rainbow__text--highlighted').text('O arco-\xEDris dos meus sonhos');
+            $('.rainbow__text-2').html('O <span class="rainbow__text--highlighted"> arco-\xEDris </span> dos meus sonhos');
             $('.rain__text').text('E eu \xE0s vezes falho');
             $('.rain__text--2').text('Em ser grata aos pingos de chuva');
             $('.rain__text--highlighted').text('Que mant\xEAm minha esperan\xE7a viva\'');
@@ -25,7 +25,7 @@ $(document).ready(function () {
         } else {
             $('.switchLabel').text('ENGLISH');
             $('.rainbow__text').text('\'My eyes constantly seek');
-            $('.rainbow__text--highlighted').text('The rainbow of my dreams');
+            $('.rainbow__text-2').html('The <span class="rainbow__text--highlighted"> rainbow </span> of my dreams');
             $('.rain__text').text('And I sometimes fail');
             $('.rain__text--2').text('To be grateful for raindrops');
             $('.rain__text--highlighted').text('That keep my hopes alive\'');
@@ -55,11 +55,13 @@ window.onload = function () {
                 if (direction === 1) {
                     $("body").css({
                         'transform': 'translateY(-100vh)',
-                        'transition': 'all 1s'
+                        'transition': 'all 1s',
+                        'backface-visibility': 'hidden'
                     });
                     $("#switch").css({
                         'transform': 'translateY(100vh)',
-                        'transition': 'all 1s'
+                        'transition': 'all 1s',
+                        'backface-visibility': 'hidden'
                     });
                     currentSection++;
                     removeAnimations();
@@ -71,11 +73,13 @@ window.onload = function () {
                 if (direction === 1) {
                     $("body").css({
                         'transform': 'translateY(-200vh)',
-                        'transition': 'all 1s'
+                        'transition': 'all 1s',
+                        'backface-visibility': 'hidden'
                     });
                     $("#switch").css({
                         'transform': 'translateY(200vh)',
-                        'transition': 'all 1s'
+                        'transition': 'all 1s',
+                        'backface-visibility': 'hidden'
                     });
                     currentSection++;
                     removeAnimations();
@@ -84,11 +88,13 @@ window.onload = function () {
                 }
                 $("body").css({
                     'transform': 'translateY(0)',
-                    'transition': 'all 1s'
+                    'transition': 'all 1s',
+                    'backface-visibility': 'hidden'
                 });
                 $("#switch").css({
                     'transform': 'translateY(0)',
-                    'transition': 'all 1s'
+                    'transition': 'all 1s',
+                    'backface-visibility': 'hidden'
                 });
                 currentSection--;
                 removeAnimations();
@@ -100,11 +106,13 @@ window.onload = function () {
                 }
                 $("body").css({
                     'transform': 'translateY(-100vh)',
-                    'transition': 'all 1s'
+                    'transition': 'all 1s',
+                    'backface-visibility': 'hidden'
                 });
                 $("#switch").css({
                     'transform': 'translateY(100vh)',
-                    'transition': 'all 1s'
+                    'transition': 'all 1s',
+                    'backface-visibility': 'hidden'
                 });
                 currentSection--;
                 removeAnimations();
