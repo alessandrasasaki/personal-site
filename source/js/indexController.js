@@ -31,7 +31,7 @@ $(document).ready(() => {
             $('.contact__subtitle').text(`Front-end developer`);
             $('.contact__text').text(`São Paulo - Brazil`);
             $("#curriculum").text(`▴ Curriculum`);
-            $('#curriculum').attr('href', 'teste');
+            $('#curriculum').attr('href', 'http://alessandrasasaki.com/cas/ASen.pdf');
             $('#summoner').text(`▴ Summoner stats`);
         }
     });
